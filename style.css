@@ -3,3 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #333;
+    border-top: 10px solid #1098ad;
+}
+
+.container {
+    display: grid;
+    width: 1280px;
+}
+
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
