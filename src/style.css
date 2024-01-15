@@ -57,3 +57,10 @@ nav {
   text-decoration: none;
   transition: all 0.2s;
 }
+
+.nav__link:hover {
+  background-color: #5eb0c5;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
