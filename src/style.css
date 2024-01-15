@@ -1,74 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 
+Colors: 
+    color: #f44336;
+    color: #ffffff
+ */
+
+:root {
+  color: #5eb0c5;
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
-    background-color: #1e1e1e;
-    border-top: 10px solid #1098ad;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-.main-header-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    column-gap: 80px;
+.nav__links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
-.header-contents {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-}
-
-.nav-bar {
-    gap: 50px;
-    border-radius: 100px;
-}
-.home-btn {
-    border-radius: 50px;
-    background-color: #1098ad;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-a:link, a:visited {
-    color: #fff;
-    text-decoration: none;
-}
-
-a:hover, a:active {
-    color: #fff;
-    box-shadow: 0 0 20px 3px #15bbca;
-}
-
-article {
-    align-items: center;
-}
-.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    background-color: #15ad10;
-    border: none;
-    border-radius: 100px;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #12960e;
-    box-shadow: 0 0 100px 5px #1cdd15
+.nav__link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #444;
+  text-decoration: none;
+  transition: all 0.2s;
 }
