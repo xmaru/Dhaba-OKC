@@ -2,7 +2,7 @@
 
 const h1 = document.querySelector("h1");
 h1.addEventListener("mouseenter", () => {
-  h1.style.backgroundColor = "#f44336";
+  h1.style.backgroundColor = "#5eb0c5";
 });
 
 h1.addEventListener("mouseleave", () => {
