@@ -1,10 +1,34 @@
 "use strict";
 
-const h1 = document.querySelector("h1");
-h1.addEventListener("mouseenter", () => {
-  h1.style.backgroundColor = "#5eb0c5";
-});
+fetch("cateringMenu.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const container = document.getElementById("cateringMenu");
 
-h1.addEventListener("mouseleave", () => {
-  h1.style.backgroundColor = "#ffffff";
-});
+    data.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      let priceHTML = "";
+
+      if (item.type === "tray") {
+        priceHTML = `
+          <p>Quarter: $${item.prices.quarter}</p>
+          <p>Small: $${item.prices.small}</p>
+          <p>Medium: $${item.prices.medium}</p>
+          <p>Large: $${item.prices.large}</p>
+        `;
+      } else if (item.type === "piece") {
+        priceHTML = `
+          <p>Each: $${item.prices.each}</p>
+        `;
+      }
+
+      card.innerHTML = `
+        <h3>${item.name}</h3>
+        ${priceHTML}
+      `;
+
+      container.appendChild(card);
+    });
+  });

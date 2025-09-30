@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Chicken Curry",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 45,
+      "medium": 65,
+      "large": 90
+    }
+  },
+  {
+    "name": "Goat Curry",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 60,
+      "medium": 85,
+      "large": 120
+    }
+  },
+  {
+    "name": "Butter Naan",
+    "type": "piece",
+    "prices": {
+      "each": 2
+    }
+  },
+  {
+    "name": "Seekh Kabob",
+    "type": "piece",
+    "prices": {
+      "each": 3
+    }
+  },
+  {
+    "name": "Chicken Biryani",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 55,
+      "medium": 80,
+      "large": 110
+    }
+  },
+  {
+    "name": "Vegetable Samosa",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "name": "Butter Chicken",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 60,
+      "medium": 85,
+      "large": 120
+    }
+  },
+  {
+    "name": "Chana Pulao",
+    "type": "tray",
+    "prices": {
+      "quarter": 20,
+      "small": 35,
+      "medium": 50,
+      "large": 70
+    }
+  },
+  {
+    "name": "Gulab Jamun",
+    "type": "piece",
+    "prices": {
+      "each": 2
+    }
+  },
+  {
+    "name": "Chicken Pulao",
+    "type": "tray",
+    "prices": {
+      "small": 70,
+      "medium": 100,
+      "large": 130
+    }
+  }
+]
