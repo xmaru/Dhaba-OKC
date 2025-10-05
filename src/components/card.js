@@ -1,32 +1,37 @@
-fetch("cateringMenu.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const container = document.getElementById("cateringMenu");
+const fetchCateringMenu = () => {
+  fetch("cateringMenu.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const container = document.getElementById("cateringMenu");
 
-    data.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "card";
+      data.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "card";
 
-      let priceHTML = "";
+        let priceHTML = "";
 
-      if (item.type === "tray") {
-        priceHTML = `
+        if (item.type === "tray") {
+          priceHTML = `
           <p>Quarter: $${item.prices.quarter}</p>
           <p>Small: $${item.prices.small}</p>
           <p>Medium: $${item.prices.medium}</p>
           <p>Large: $${item.prices.large}</p>
         `;
-      } else if (item.type === "piece") {
-        priceHTML = `
+        } else if (item.type === "piece") {
+          priceHTML = `
           <p>Each: $${item.prices.each}</p>
         `;
-      }
+        }
 
-      card.innerHTML = `
+        card.innerHTML = `
         <h3>${item.name}</h3>
         ${priceHTML}
       `;
 
-      container.appendChild(card);
-    });
-  });
+        container.appendChild(card);
+      });
+    })
+    .catch((error) => console.error("Error fetching catering menu:", error));
+};
+
+window.fetchCateringMenu = fetchCateringMenu;
