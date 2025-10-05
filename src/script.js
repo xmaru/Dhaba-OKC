@@ -13,10 +13,10 @@ toggleBtn.addEventListener("click", () => {
 
   // Save preference
   if (document.body.classList.contains("dark-mode")) {
-    toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    toggleBtn.innerHTML = '<i class="fa-regular fa-moon"></i>';
     localStorage.setItem("theme", "dark");
   } else {
-    toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    toggleBtn.innerHTML = '<i class="fa-regular fa-sun"></i>';
     localStorage.setItem("theme", "light");
   }
 });

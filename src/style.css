@@ -84,13 +84,13 @@ header {
 }
 
 header.navbar-solid {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 }
 
 body.dark-mode header.navbar-solid {
-  background: (26, 19, 16, 0.95); /* Darker background for dark mode */
+  background: rgba(26, 19, 16, 0.5); /* Darker background for dark mode */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
