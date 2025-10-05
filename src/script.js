@@ -1,34 +1,31 @@
 "use strict";
 
-fetch("cateringMenu.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const container = document.getElementById("cateringMenu");
+const toggleBtn = document.getElementById("modeToggle");
 
-    data.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "card";
+// Check saved preference
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  toggleBtn.checked = true;
+}
 
-      let priceHTML = "";
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 
-      if (item.type === "tray") {
-        priceHTML = `
-          <p>Quarter: $${item.prices.quarter}</p>
-          <p>Small: $${item.prices.small}</p>
-          <p>Medium: $${item.prices.medium}</p>
-          <p>Large: $${item.prices.large}</p>
-        `;
-      } else if (item.type === "piece") {
-        priceHTML = `
-          <p>Each: $${item.prices.each}</p>
-        `;
-      }
+  // Save preference
+  if (document.body.classList.contains("dark-mode")) {
+    toggleBtn.textContent = "🌙";
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "light");
+  }
+});
 
-      card.innerHTML = `
-        <h3>${item.name}</h3>
-        ${priceHTML}
-      `;
-
-      container.appendChild(card);
-    });
-  });
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector("header");
+  if (window.scrollY > 50) {
+    navbar.classList.add("navbar-solid");
+  } else {
+    navbar.classList.remove("navbar-solid");
+  }
+});
