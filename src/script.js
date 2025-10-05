@@ -13,10 +13,10 @@ toggleBtn.addEventListener("click", () => {
 
   // Save preference
   if (document.body.classList.contains("dark-mode")) {
-    toggleBtn.textContent = "🌙";
+    toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
     localStorage.setItem("theme", "dark");
   } else {
-    toggleBtn.textContent = "☀️";
+    toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
     localStorage.setItem("theme", "light");
   }
 });
@@ -29,5 +29,3 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("navbar-solid");
   }
 });
-
-// testing dev branch 
