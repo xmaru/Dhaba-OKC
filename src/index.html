@@ -23,14 +23,24 @@
   <body>
     <header>
       <nav class="navbar">
-        <h2>Dhaba OKC</h2>
+        <h2>
+          <img
+            src="images/TransparentLogoBig.png"
+            alt="dhaba logo, a chicken rice bowl"
+            class="logo"
+          />
+        </h2>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="pages/menuPage.html">Menu</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="pages/menuPage.html">Menu</a></li>
           <li><a href="pages/cateringPage.html">Catering</a></li>
-          <li><button id="modeToggle" class="mode-toggle">☀️</button></li>
+          <li>
+            <button id="modeToggle" class="mode-toggle">
+              <i class="fa-regular fa-sun"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -39,10 +49,11 @@
         <div class="overlay"></div>
 
         <div class="hero-content">
-          <h1>Dhaba OKC</h1>
-          <h3>Authentic Pakistani Cuisine</h3>
-          <p>
-            Experience the rich flavors of Pakistan right here in Oklahoma City.
+          <h1>Dhaba</h1>
+          <h3>Authentic <span class="highlight">Indo-Pak</span> Cuisine</h3>
+          <p class="hero-description">
+            Experience the rich flavors of Indo-Pakistani cuisine, authentic and
+            delicious.
           </p>
           <div class="hero-buttons">
             <button class="btn-primary">View Menu</button>
@@ -53,6 +64,31 @@
           <p class="location">
             <i class="fa-solid fa-location-dot"></i> Oklahoma City, OK
           </p>
+        </div>
+      </section>
+      <section id="Buffet">
+        <div class="container">
+          <h2 class="section-title">Buffet</h2>
+          <div class="buffet-options">
+            <div class="buffet-option">
+              <img src="images/buffet1.jpg" alt="Buffet Option 1" />
+              <h3>Lunch Buffet</h3>
+              <p>Monday to Friday, 11 AM - 3 PM</p>
+              <p>$12.99 per person</p>
+            </div>
+            <div class="buffet-option">
+              <img src="images/buffet2.jpg" alt="Buffet Option 2" />
+              <h3>Dinner Buffet</h3>
+              <p>Monday to Saturday, 5 PM - 9 PM</p>
+              <p>$18.99 per person</p>
+            </div>
+            <div class="buffet-option">
+              <img src="images/buffet3.jpg" alt="Buffet Option 3" />
+              <h3>Weekend Special Buffet</h3>
+              <p>Saturday and Sunday, 12 PM - 8 PM</p>
+              <p>$20.99 per person</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
