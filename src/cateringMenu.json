@@ -81,9 +81,40 @@
     "name": "Chicken Pulao",
     "type": "tray",
     "prices": {
+      "quarter": 40,
       "small": 70,
       "medium": 100,
       "large": 130
+    }
+  },
+  {
+    "name": "Achari Chicken",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 55,
+      "medium": 80,
+      "large": 110
+    }
+  },
+  {
+    "name": "Shinwari Chicken",
+    "type": "tray",
+    "prices": {
+      "quarter": 20,
+      "small": 35,
+      "medium": 50,
+      "large": 70
+    }
+  },
+  {
+    "name": "Zarda",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 65,
+      "large": 80
     }
   }
 ]
