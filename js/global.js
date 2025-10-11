@@ -29,3 +29,7 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("navbar-solid");
   }
 });
+
+// 10/11/2025 - Chana Daal, Chana Masala, Daal Makhani.
+// 10/11/2025 - Mixed Veggie, Aloo Tori, Aloo Baingan.
+// Wednesday's Special: Goat Curry
