@@ -1,22 +1,24 @@
 [
   {
-    "name": "Chicken Curry",
-    "type": "tray",
-    "prices": {
-      "quarter": 25,
-      "small": 45,
-      "medium": 65,
-      "large": 90
-    }
-  },
-  {
-    "name": "Goat Curry",
+    "name": "Chicken Karahi",
+    "category": "chicken",
+
     "type": "tray",
     "prices": {
       "quarter": 35,
-      "small": 60,
-      "medium": 85,
-      "large": 120
+      "small": 65,
+      "medium": 100,
+      "large": 130
+    }
+  },
+  {
+    "name": "Goat Karahi",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 70,
+      "medium": 110,
+      "large": 170
     }
   },
   {
@@ -30,17 +32,17 @@
     "name": "Seekh Kabob",
     "type": "piece",
     "prices": {
-      "each": 3
+      "each": 4
     }
   },
   {
     "name": "Chicken Biryani",
     "type": "tray",
     "prices": {
-      "quarter": 30,
+      "quarter": 35,
       "small": 55,
-      "medium": 80,
-      "large": 110
+      "medium": 100,
+      "large": 130
     }
   },
   {
@@ -55,34 +57,34 @@
     "type": "tray",
     "prices": {
       "quarter": 35,
-      "small": 60,
-      "medium": 85,
-      "large": 120
+      "small": 70,
+      "medium": 110,
+      "large": 140
     }
   },
   {
     "name": "Chana Pulao",
     "type": "tray",
     "prices": {
-      "quarter": 20,
-      "small": 35,
-      "medium": 50,
-      "large": 70
+      "quarter": 30,
+      "small": 50,
+      "medium": 75,
+      "large": 100
     }
   },
   {
     "name": "Gulab Jamun",
     "type": "piece",
     "prices": {
-      "each": 2
+      "each": 1.25
     }
   },
   {
     "name": "Chicken Pulao",
     "type": "tray",
     "prices": {
-      "quarter": 40,
-      "small": 70,
+      "quarter": 35,
+      "small": 65,
       "medium": 100,
       "large": 130
     }
@@ -91,10 +93,10 @@
     "name": "Achari Chicken",
     "type": "tray",
     "prices": {
-      "quarter": 30,
-      "small": 55,
-      "medium": 80,
-      "large": 110
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130
     }
   },
   {
