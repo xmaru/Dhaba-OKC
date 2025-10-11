@@ -91,6 +91,27 @@ body.dark-mode header.navbar-solid {
 .logo {
   height: 50px; /* Adjust this value to make it smaller/larger */
   width: auto; /* Maintains aspect ratio */
+  z-index: 1001;
+}
+
+.nav-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  z-index: 1001;
+}
+
+.nav-hamburger.active {
+  color: var(--text-color);
+}
+
+.navbar-solid .nav-hamburger {
+  color: var(--text-color);
 }
 
 .navbar {
@@ -117,13 +138,13 @@ body.dark-mode header.navbar-solid {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-header.navbar-solid .nav-links a {
-  color: var(--text-color);
+header:not(.navbar-solid) .nav-links a {
+  color: #fff;
 }
 
 .nav-links a:hover {
@@ -142,6 +163,11 @@ header.navbar-solid .nav-links a {
 
 header.navbar-solid .mode-toggle {
   color: var(--text-color);
+}
+
+header.navbar-solid .nav-links a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 2px 4px var(--shadow-hover-color);
 }
 
 .mode-toggle:hover {
@@ -356,6 +382,48 @@ footer {
 
   .hero-description {
     font-size: 1rem;
+  }
+  .nav-hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background: var(--bg-color);
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+
+    /*  Layout for links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    /* Hiding the menu initially */
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links li a,
+  .nav-links .mode-toggle {
+    color: var(--text-color) !important;
+    font-size: 1.2rem;
   }
 }
 
