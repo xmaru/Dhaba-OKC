@@ -33,3 +33,32 @@ window.addEventListener("scroll", () => {
 // 10/11/2025 - Chana Daal, Chana Masala, Daal Makhani.
 // 10/11/2025 - Mixed Veggie, Aloo Tori, Aloo Baingan.
 // Wednesday's Special: Goat Curry
+
+// Hamburger menu toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("active");
+
+  // chance icon when menu is open
+  const icon = hamburger.querySelector("i");
+  if (navLinks.classList.contains("active")) {
+    icon.className = "fa-solid fa-xmark";
+  } else {
+    icon.className = "fa-solid fa-bars";
+  }
+
+  // Close menu when clicking on a link
+  navLinks.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("active");
+
+      // reset to hamburger icon
+      const icon = hamburger.querySelector("i");
+      icon.className = "fa-solid fa-bars";
+    }
+  });
+});
