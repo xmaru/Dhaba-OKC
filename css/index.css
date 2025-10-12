@@ -143,7 +143,7 @@ header:not(.navbar-solid) .nav-links a {
   color: #fff;
 }
 
-.nav-links a:hover {
+header:not(.navbar-solid) .nav-links a:hover {
   color: var(--accent-color);
   text-shadow: 0 2px 4px var(--shadow-hover-color);
 }
@@ -234,10 +234,12 @@ main {
 .highlight {
   color: var(--accent-color);
   font-weight: 700;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
-/* BUTTONS */
+/* ===========================
+   BUTTON STYLES
+   =========================== */
 
 .hero-buttons {
   display: flex;
@@ -292,7 +294,7 @@ main {
   color: #222;
 }
 
-/* LOCATION */
+/* HERO LOCATION */
 .location {
   margin-top: 25px;
   font-size: 0.9rem;
