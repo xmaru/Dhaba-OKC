@@ -305,6 +305,7 @@ main {
   gap: 8px;
   cursor: pointer;
   vertical-align: top;
+  text-decoration: none;
 }
 
 .btn-glass:hover {
