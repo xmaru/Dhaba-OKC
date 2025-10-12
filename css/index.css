@@ -38,15 +38,6 @@ body.dark-mode {
   padding: 0 var(--container-padding);
 }
 
-html {
-  background: var(--bg-color);
-  transform: background 0.4s ease;
-}
-
-body.dark-mode html {
-  background: #12100e;
-}
-
 h1 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
