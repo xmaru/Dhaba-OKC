@@ -1,11 +1,7 @@
 {
   "name": "Dhaba OKC",
-  "short_name": "Dhaba OKC",
-  "description": "Experience the authentic flavors of India at Dhaba OKC, where traditional recipes meet a vibrant atmosphere. Join us for a culinary journey that delights your senses.",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#37b24d",
+  "short_name": "Dhaba",
+  "description": "Experience the authentic taste of Dhaba OKC.",
   "icons": [
     {
       "src": "/assets/images/favicons/android-chrome-192x192.png",
@@ -18,6 +14,11 @@
       "type": "image/png"
     },
     {
+      "src": "/assets/images/favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
       "src": "/assets/images/favicons/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
@@ -26,12 +27,10 @@
       "src": "/assets/images/favicons/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
-    },
-    {
-      "src": "/assets/images/favicons/maskable-icon.png",
-      "sizes": "196x196",
-      "type": "image/png",
-      "purpose": "maskable"
     }
-  ]
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
 }
