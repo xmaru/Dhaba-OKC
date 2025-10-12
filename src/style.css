@@ -91,6 +91,27 @@ body.dark-mode header.navbar-solid {
 .logo {
   height: 50px; /* Adjust this value to make it smaller/larger */
   width: auto; /* Maintains aspect ratio */
+  z-index: 1001;
+}
+
+.nav-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  z-index: 1001;
+}
+
+.nav-hamburger.active {
+  color: var(--text-color);
+}
+
+.navbar-solid .nav-hamburger {
+  color: var(--text-color);
 }
 
 .navbar {
@@ -117,13 +138,13 @@ body.dark-mode header.navbar-solid {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
-header.navbar-solid .nav-links a {
-  color: var(--text-color);
+header:not(.navbar-solid) .nav-links a {
+  color: #fff;
 }
 
 .nav-links a:hover {
@@ -144,6 +165,11 @@ header.navbar-solid .mode-toggle {
   color: var(--text-color);
 }
 
+header.navbar-solid .nav-links a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 2px 4px var(--shadow-hover-color);
+}
+
 .mode-toggle:hover {
   transform: scale(1.2);
 }
@@ -160,8 +186,7 @@ main {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("images/heroSection_img.jpg") center center / cover no-repeat
-    fixed;
+  background: url("images/heroImg.png") center center / cover no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -222,7 +247,7 @@ main {
   gap: 20px;
 }
 
-.btn-primary {
+.btn-hero {
   background: var(--accent-color);
   color: #fff;
   border: none;
@@ -239,13 +264,13 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.btn-primary:hover {
+.btn-hero:hover {
   background: var(--accent-dark);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Glass Button */
-.glass-button {
+.btn-glass {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
@@ -264,7 +289,7 @@ main {
   vertical-align: top;
 }
 
-.glass-button:hover {
+.btn-glass:hover {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
   color: #222;
@@ -347,27 +372,71 @@ footer {
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    margin-bottom: 12px;
   }
 
   .hero h3 {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 1.6rem;
+  }
+  .nav-hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background: var(--bg-color);
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+
+    /*  Layout for links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    /* Hiding the menu initially */
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links li a,
+  .nav-links .mode-toggle {
+    color: var(--text-color) !important;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
   }
   .hero h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .hero-description {
-    font-size: 0.8rem;
+    font-size: 1.15rem;
   }
 
   .hero-buttons {
