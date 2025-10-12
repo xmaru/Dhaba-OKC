@@ -6,8 +6,9 @@
   --card-bg: #ffffff;
   --accent-color: #37b24d;
   --accent-dark: #2b8a3e;
+  --footer-rgb: 255, 255, 255;
+  --footer-bg: rgb(var(--footer-rgb));
   /* old color: #f7931a */
-  /* --nav-bg: #ffffff; */
 
   /* Container SYSTEM */
   --container-max-width: 1200px;
@@ -37,7 +38,14 @@ body.dark-mode {
   padding: 0 var(--container-padding);
 }
 
-/* Responsive container padding */
+html {
+  background: var(--bg-color);
+  transform: background 0.4s ease;
+}
+
+body.dark-mode html {
+  background: #12100e;
+}
 
 h1 {
   font-family: "Playfair Display", serif;
@@ -58,6 +66,10 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.4s ease, color 0.4s ease;
+
+  /* 🍎 FIX: Add padding for safe areas */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* ===========================
