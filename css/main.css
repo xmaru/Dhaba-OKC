@@ -183,7 +183,8 @@ main {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("images/heroImg.png") center center / cover no-repeat fixed;
+  background: url("/assets/images/heroImg.png") center center / cover no-repeat
+    fixed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
