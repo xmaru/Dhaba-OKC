@@ -663,6 +663,24 @@ footer {
     color: var(--text-color) !important;
     font-size: 1.2rem;
   }
+
+  .buffet-card-description h3 {
+    margin-top: 32px;
+  }
+
+  .buffet-card {
+    max-width: 350px;
+  }
+
+  .special-day-card .tag-special {
+    margin-bottom: 0;
+  }
+  .special-day-card .buffet-card-title {
+    margin-top: 10px;
+  }
+  .price-container {
+    padding: 16px 36px;
+  }
 }
 
 @media (max-width: 480px) {
