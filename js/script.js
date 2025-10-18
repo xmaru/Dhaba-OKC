@@ -217,7 +217,8 @@ if (day === 3) {
 //      Footer        //
 // ////////////////////
 const currentYear = new Date().getFullYear();
-document.querySelector("footer").innerHTML = `
+console.log(document.querySelector(".footer"));
+document.querySelector(".footer").innerHTML = `
   <p>&copy; ${currentYear} Dhaba OKC. All rights reserved.</p>
   <p>
     Developed by
