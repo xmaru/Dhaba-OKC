@@ -652,8 +652,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 20px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .contact-container h2 {
@@ -694,18 +698,32 @@ main {
   margin: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-  width: 500px;
+  width: min(500px, 90vw);
+  max-width: 100%;
 }
 
 .contact-card i {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--accent-color);
-  margin-right: 12px;
+  margin-right: 24px;
+}
+
+.contact-card div h3 {
+  margin-bottom: 6px;
+}
+
+.phone-card a,
+.address-card a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.2s ease;
+  font-size: 1.1rem;
 }
 
 .map-container {
-  width: 500px;
-  height: 500px;
+  width: min(500px, 90vw);
+  height: min(500px, 90vw);
+  max-width: 100%;
   border: 1px solid var(--border-card);
   border-radius: 10px;
   overflow: hidden;
@@ -753,6 +771,13 @@ footer {
 
   .hero-content {
     margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .info-details {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -846,6 +871,21 @@ footer {
   .about-card {
     max-width: 80vw;
     height: auto;
+  }
+
+  /* Contact section responsive */
+  .info-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-cards-container {
+    width: 100%;
+  }
+
+  .map-container {
+    width: min(500px, 90vw);
+    height: min(400px, 80vw);
   }
 }
 

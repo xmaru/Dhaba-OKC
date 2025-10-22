@@ -225,3 +225,9 @@ document.querySelector(".footer").innerHTML = `
     <a class="footer-link" href="https://github.com/xmaru" target="_blank">Umar</a>
   </p>
 `;
+
+// ////////////////////////
+// Contact Section Code  //
+// ////////////////////////
+
+// Fetch weather data
