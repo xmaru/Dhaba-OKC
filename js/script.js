@@ -213,11 +213,75 @@ if (day === 3) {
   specialDayCard.style.display = "none";
 }
 
-// // ///////////////////
+// ///////////////////
+//   Contact Section  //
+///////////////////////
+
+// Fetch Weather
+const key = "1a0958bec7d64b29899195332252710";
+const latLong = "35.592411, -97.4398651"; // Dhaba OKC coordinates
+const city = "Chicago"; // test data
+const weatherUrl = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${latLong}`;
+
+// Fetch weather data
+fetch(weatherUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    const weatherData = data;
+    console.log("Weather Data:", weatherData);
+    const weatherCondition = document.querySelector(".weather-condition");
+    const weatherTemp = document.querySelector(".weather-temp");
+    if (weatherCondition) {
+      weatherCondition.textContent = weatherData.current.condition.text;
+    }
+    if (weatherTemp) {
+      weatherTemp.textContent = `${weatherData.current.temp_f} °F`;
+    }
+
+    // Replace the fallback error icon with the weather icon from the API
+    const errorIcon = document.querySelector(".error-icon");
+    const weatherCard = document.querySelector(".weather-card");
+
+    // Create the weather icon image element
+    const apiImg = document.createElement("img");
+    apiImg.src = `https:${weatherData.current.condition.icon}`;
+    apiImg.alt = weatherData.current.condition.text || "Weather";
+    apiImg.className = "weather-icon-img";
+    apiImg.width = 56;
+    apiImg.height = 56;
+
+    if (weatherCard) {
+      // Remove the fallback error icon only after we have a successful API image
+      if (errorIcon) {
+        errorIcon.remove();
+      }
+
+      // Insert the API image at the start of the weather card
+      weatherCard.insertBefore(apiImg, weatherCard.firstChild);
+    } else {
+      // As a fallback, if weatherCard isn't found, try to remove the error icon and append to body
+      if (errorIcon) {
+        errorIcon.remove();
+      }
+      document.body.appendChild(apiImg);
+    }
+  })
+  .catch((error) => {
+    const weatherCondition = document.querySelector(".weather-condition");
+    const weatherTemp = document.querySelector(".weather-temp");
+    if (weatherCondition) {
+      weatherCondition.textContent = "Unable to retrieve weather data.";
+    }
+    if (weatherTemp) {
+      weatherTemp.textContent = "";
+    }
+    // Keep the fallback error icon in place on error so the user sees the placeholder
+    console.error("Error fetching weather data:", error);
+  });
+
 //      Footer        //
 // ////////////////////
 const currentYear = new Date().getFullYear();
-console.log(document.querySelector(".footer"));
 document.querySelector(".footer").innerHTML = `
   <p>&copy; ${currentYear} Dhaba OKC. All rights reserved.</p>
   <p>
@@ -225,9 +289,3 @@ document.querySelector(".footer").innerHTML = `
     <a class="footer-link" href="https://github.com/xmaru" target="_blank">Umar</a>
   </p>
 `;
-
-// ////////////////////////
-// Contact Section Code  //
-// ////////////////////////
-
-// Fetch weather data
