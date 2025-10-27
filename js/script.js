@@ -1,5 +1,8 @@
 "use strict";
 
+// ////////////////////////
+// Dark Mode Toggle Logic //
+// ////////////////////////
 const toggleBtn = document.getElementById("modeToggle");
 
 // Check saved preference
@@ -30,9 +33,20 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// 10/11/2025 - Chana Daal, Chana Masala, Daal Makhani.
-// 10/11/2025 - Mixed Veggie, Aloo Tori, Aloo Baingan.
-// Wednesday's Special: Goat Curry
+// ////////////////////////
+// Navigation Code     //
+////////////////////////
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
@@ -62,3 +76,216 @@ hamburger.addEventListener("click", () => {
     }
   });
 });
+
+// Close menu on window resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+    const icon = hamburger.querySelector("i");
+    icon.className = "fa-solid fa-bars";
+  }
+});
+
+// ///////////////////////
+// Buffet Section Code  //
+// ///////////////////////
+
+const buffetHeader = document.querySelector(".buffet-header h2");
+const days = [
+  "Sunday's",
+  "Monday's",
+  "Tuesday's",
+  "Wednesday's",
+  "Thursday's",
+  "Friday's",
+  "Saturday's",
+];
+const todayDay = new Date().getDay();
+buffetHeader.textContent = `${days[todayDay]} Buffet`;
+
+// ================================
+// Dynamic Buffet Rotation Logic
+// ================================
+
+// 10/11/2025 - Chana Daal, Chana Masala, Daal Makhani.
+// 10/11/2025 - Mixed Veggie, Aloo Tori, Aloo Baingan.
+// Wednesday's Special: Goat Curry
+
+const daalItems = [
+  {
+    title: "Chana Daal",
+    description: "Yellow split chickpeas cooked with spices.",
+    image: "assets/images/buffetItems/chanaDaal.jpg",
+    alt: "Chana Daal",
+    category: "vegetarian",
+  },
+  {
+    title: "Chana Masala",
+    description: "Chickpeas cooked in a spicy tomato-based sauce.",
+    image: "assets/images/buffetItems/chanaMasala.jpg",
+    alt: "Chana Masala",
+    category: "vegetarian",
+  },
+  {
+    title: "Daal Makhani",
+    description: "Black lentils cooked with butter and cream.",
+    image: "assets/images/buffetItems/daalMakh.jpg",
+    alt: "Daal Makhani",
+    category: "vegetarian",
+  },
+];
+
+const veggieItems = [
+  {
+    title: "Mixed Veggie",
+    description: "A mix of potatoes, carrots, and peas cooked with spices.",
+    image: "assets/images/buffetItems/mixedVeggie.jpg",
+    alt: "Mixed Veggie",
+    category: "vegetarian",
+  },
+  {
+    title: "Aloo Tori",
+    description: "Potatoes and zucchini cooked with spices.",
+    image: "assets/images/buffetItems/alooTori.jpg",
+    alt: "Aloo Tori",
+    category: "vegetarian",
+  },
+  {
+    title: "Aloo Baingan",
+    description: "Potatoes and eggplant cooked with spices.",
+    image: "assets/images/buffetItems/alooBaingan.jpg",
+    alt: "Aloo Baingan",
+    category: "vegetarian",
+  },
+];
+// Dynamic render of daal and veggie items (each day there is one item from each category)
+const startDate = new Date("2025-10-11"); // Start date for rotation
+const today = new Date();
+const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+// Determine today's item index for both lists
+const daalIndex = daysPassed % daalItems.length;
+const veggieIndex = daysPassed % veggieItems.length;
+
+const todayDaal = daalItems[daalIndex];
+const todayVeggie = veggieItems[veggieIndex];
+
+// Update the daal card DOM elements
+const daalCard = document.querySelector(".veggie-daal-card");
+if (daalCard) {
+  daalCard.querySelector(".buffet-card-title").innerHTML =
+    todayDaal.title +
+    `<span class="tag tag-vegetarian"><i class="fa-solid fa-leaf"></i>Vegetarian</span>`;
+  daalCard.querySelector("p").textContent = todayDaal.description;
+  daalCard.querySelector("img").src = todayDaal.image;
+  daalCard.querySelector("img").alt = todayDaal.alt;
+}
+
+// Update the veggie card DOM elements
+const veggieCard = document.querySelector(".veggie-curry-card");
+if (veggieCard) {
+  veggieCard.querySelector(".buffet-card-title").innerHTML =
+    todayVeggie.title +
+    `<span class="tag tag-vegetarian"><i class="fa-solid fa-leaf"></i>Vegetarian</span>`;
+  veggieCard.querySelector("p").textContent = todayVeggie.description;
+  veggieCard.querySelector("img").src = todayVeggie.image;
+  veggieCard.querySelector("img").alt = todayVeggie.alt;
+}
+
+// ==================================
+// Special Day Item Logic - Wednesday
+// ===================================
+
+let day = new Date().getDay(); // 0 - Sunday, 1 - Monday, ..., 6 - Saturday
+// For testing purposes, uncomment the next line to set day to Wednesday
+// day = 3;
+
+if (day === 3) {
+  // Grab Chicken Curry card
+  const chickenCurryCard = document.querySelector(".chicken-curry-card");
+  const specialDayCard = document.querySelector(".special-day-card");
+
+  specialDayCard.classList.add("special-card");
+  chickenCurryCard.style.display = "none";
+} else {
+  const specialDayCard = document.querySelector(".special-day-card");
+  specialDayCard.style.display = "none";
+}
+
+// ///////////////////
+//   Contact Section  //
+///////////////////////
+
+// Fetch Weather
+const key = "1a0958bec7d64b29899195332252710";
+const latLong = "35.592411, -97.4398651"; // Dhaba OKC coordinates
+const city = "Chicago"; // test data
+const weatherUrl = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${latLong}`;
+
+// Fetch weather data
+fetch(weatherUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    const weatherData = data;
+    console.log("Weather Data:", weatherData);
+    const weatherCondition = document.querySelector(".weather-condition");
+    const weatherTemp = document.querySelector(".weather-temp");
+    if (weatherCondition) {
+      weatherCondition.textContent = weatherData.current.condition.text;
+    }
+    if (weatherTemp) {
+      weatherTemp.textContent = `${weatherData.current.temp_f} °F`;
+    }
+
+    // Replace the fallback error icon with the weather icon from the API
+    const errorIcon = document.querySelector(".error-icon");
+    const weatherCard = document.querySelector(".weather-card");
+
+    // Create the weather icon image element
+    const apiImg = document.createElement("img");
+    apiImg.src = `https:${weatherData.current.condition.icon}`;
+    apiImg.alt = weatherData.current.condition.text || "Weather";
+    apiImg.className = "weather-icon-img";
+    apiImg.width = 56;
+    apiImg.height = 56;
+
+    if (weatherCard) {
+      // Remove the fallback error icon only after we have a successful API image
+      if (errorIcon) {
+        errorIcon.remove();
+      }
+
+      // Insert the API image at the start of the weather card
+      weatherCard.insertBefore(apiImg, weatherCard.firstChild);
+    } else {
+      // As a fallback, if weatherCard isn't found, try to remove the error icon and append to body
+      if (errorIcon) {
+        errorIcon.remove();
+      }
+      document.body.appendChild(apiImg);
+    }
+  })
+  .catch((error) => {
+    const weatherCondition = document.querySelector(".weather-condition");
+    const weatherTemp = document.querySelector(".weather-temp");
+    if (weatherCondition) {
+      weatherCondition.textContent = "Unable to retrieve weather data.";
+    }
+    if (weatherTemp) {
+      weatherTemp.textContent = "";
+    }
+    // Keep the fallback error icon in place on error so the user sees the placeholder
+    console.error("Error fetching weather data:", error);
+  });
+
+//      Footer        //
+// ////////////////////
+const currentYear = new Date().getFullYear();
+document.querySelector(".footer").innerHTML = `
+  <p>&copy; ${currentYear} Dhaba OKC. All rights reserved.</p>
+  <p>
+    Developed by
+    <a class="footer-link" href="https://github.com/xmaru" target="_blank">Umar</a>
+  </p>
+`;
