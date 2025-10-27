@@ -219,9 +219,9 @@ if (day === 3) {
 
 // Fetch Weather
 const key = "1a0958bec7d64b29899195332252710";
-const latLong = "35.592411, -97.4398651"; // Dhaba OKC coordinates
-const city = "Chicago"; // test data
-const weatherUrl = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${latLong}`;
+const latLong = "35.592411,-97.4398651"; // Dhaba OKC coordinates
+const proxy = "https://api.allorigins.win/raw?url=";
+const weatherUrl = `${proxy}https://api.weatherapi.com/v1/current.json?key=${key}&q=${latLong}`;
 
 // Fetch weather data
 fetch(weatherUrl)
