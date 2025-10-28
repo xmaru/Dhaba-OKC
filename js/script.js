@@ -222,7 +222,6 @@ if (day === 3) {
 fetch("/.netlify/functions/getWeather")
   .then((response) => response.json())
   .then((data) => {
-    console.log("Weather Data:", data);
     const weatherCondition = document.querySelector(".weather-condition");
     const weatherTemp = document.querySelector(".weather-temp");
     const errorIcon = document.querySelector(".error-icon");

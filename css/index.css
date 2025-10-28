@@ -946,4 +946,20 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+
+  .weather-card img {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+  }
+
+  .contact-text h3 {
+    font-size: 1rem;
+  }
+
+  .phone-card a,
+  .address-card a,
+  .contact-text p {
+    font-size: 0.7rem;
+  }
 }
