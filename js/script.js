@@ -217,53 +217,43 @@ if (day === 3) {
 //   Contact Section  //
 ///////////////////////
 
-// Fetch Weather
-const key = "1a0958bec7d64b29899195332252710";
-const latLong = "35.592411,-97.4398651"; // Dhaba OKC coordinates
-const proxy = "https://api.allorigins.win/raw?url=";
-const weatherUrl = `${proxy}https://api.weatherapi.com/v1/current.json?key=${key}&q=${latLong}`;
-
-// Fetch weather data
-fetch(weatherUrl)
+// Fetch Weather from Netlify function
+fetch("/.netlify/functions/getWeather")
   .then((response) => response.json())
   .then((data) => {
-    const weatherData = data;
-    console.log("Weather Data:", weatherData);
+    console.log("Weather Data:", data);
     const weatherCondition = document.querySelector(".weather-condition");
     const weatherTemp = document.querySelector(".weather-temp");
-    if (weatherCondition) {
-      weatherCondition.textContent = weatherData.current.condition.text;
-    }
-    if (weatherTemp) {
-      weatherTemp.textContent = `${weatherData.current.temp_f} °F`;
-    }
-
-    // Replace the fallback error icon with the weather icon from the API
     const errorIcon = document.querySelector(".error-icon");
     const weatherCard = document.querySelector(".weather-card");
 
-    // Create the weather icon image element
+    if (data.error) {
+      if (weatherCondition)
+        weatherCondition.textContent = "Error loading weather.";
+      if (weatherTemp) weatherTemp.textContent = "";
+      console.error("Weather API Error:", data.error);
+      return;
+    }
+
+    // ✅ Update text
+    if (weatherCondition) {
+      weatherCondition.textContent = data.current.condition.text;
+    }
+    if (weatherTemp) {
+      weatherTemp.textContent = `${data.current.temp_f} °F`;
+    }
+
+    // ✅ Replace error icon with weather icon
     const apiImg = document.createElement("img");
-    apiImg.src = `https:${weatherData.current.condition.icon}`;
-    apiImg.alt = weatherData.current.condition.text || "Weather";
+    apiImg.src = `https:${data.current.condition.icon}`;
+    apiImg.alt = data.current.condition.text || "Weather";
     apiImg.className = "weather-icon-img";
     apiImg.width = 56;
     apiImg.height = 56;
 
     if (weatherCard) {
-      // Remove the fallback error icon only after we have a successful API image
-      if (errorIcon) {
-        errorIcon.remove();
-      }
-
-      // Insert the API image at the start of the weather card
+      if (errorIcon) errorIcon.remove();
       weatherCard.insertBefore(apiImg, weatherCard.firstChild);
-    } else {
-      // As a fallback, if weatherCard isn't found, try to remove the error icon and append to body
-      if (errorIcon) {
-        errorIcon.remove();
-      }
-      document.body.appendChild(apiImg);
     }
   })
   .catch((error) => {
@@ -275,7 +265,6 @@ fetch(weatherUrl)
     if (weatherTemp) {
       weatherTemp.textContent = "";
     }
-    // Keep the fallback error icon in place on error so the user sees the placeholder
     console.error("Error fetching weather data:", error);
   });
 
