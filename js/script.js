@@ -1,3 +1,5 @@
+// Global JS + home page (index.html) JS
+
 "use strict";
 
 // ////////////////////////
