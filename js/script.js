@@ -56,7 +56,7 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   hamburger.classList.toggle("active");
 
-  // chance icon when menu is open
+  // change icon when menu is open
   const icon = hamburger.querySelector("i");
   if (navLinks.classList.contains("active")) {
     icon.className = "fa-solid fa-xmark";
@@ -202,13 +202,12 @@ let day = new Date().getDay(); // 0 - Sunday, 1 - Monday, ..., 6 - Saturday
 // day = 3;
 
 if (day === 3) {
-  // Grab Chicken Curry card
+  // Grab Chicken Curry card and Special Day card elements
   const chickenCurryCard = document.querySelector(".chicken-curry-card");
-  const specialDayCard = document.querySelector(".special-day-card");
-
-  specialDayCard.classList.add("special-card");
+  // Hide the Chicken Curry card on Wednesdays
   chickenCurryCard.style.display = "none";
 } else {
+  // Hide the Special Day card (goat curry) on all other days
   const specialDayCard = document.querySelector(".special-day-card");
   specialDayCard.style.display = "none";
 }
