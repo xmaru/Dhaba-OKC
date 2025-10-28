@@ -903,6 +903,10 @@ footer {
     gap: 20px;
   }
 
+  .contact-header {
+    margin-bottom: 20px;
+  }
+
   .contact-cards-container {
     width: 100%;
   }

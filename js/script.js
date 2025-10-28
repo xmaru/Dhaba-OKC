@@ -235,7 +235,7 @@ fetch("/.netlify/functions/getWeather")
       return;
     }
 
-    // ✅ Update text
+    // Update text
     if (weatherCondition) {
       weatherCondition.textContent = data.current.condition.text;
     }
@@ -243,7 +243,7 @@ fetch("/.netlify/functions/getWeather")
       weatherTemp.textContent = `${data.current.temp_f} °F`;
     }
 
-    // ✅ Replace error icon with weather icon
+    // Replace error icon with weather icon
     const apiImg = document.createElement("img");
     apiImg.src = `https:${data.current.condition.icon}`;
     apiImg.alt = data.current.condition.text || "Weather";
