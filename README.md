@@ -81,9 +81,11 @@ Instead of making a full weather app, I simply implemented the weather condition
 Longterm goals:
 
 - Payment your catering bill online, update prices from admin dashboard.
-- Different project but will develop a Dhaba POS System for customers to view the catering, create orders, and submit orders to us.
-  - Using the order, generate an invoice and have a functionality to export the invoice as PDF.
+- Different project but will develop a Dhaba POS System for customers to view the catering menu, create orders, and submit orders.
+  - For the staff/admins: Using the order, generate an invoice and have a functionality to export the invoice as PDF.
+  - Mark invoices as notpaid/paid.
   - Pay for the invoice online.
+  - Store invoices in database (maybe for upto 30-60days)
 
 ## License
 
