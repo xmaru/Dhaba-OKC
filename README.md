@@ -28,6 +28,8 @@ Primary files:
 - `js/script.js` — site JavaScript (theme toggle, navigation, buffet rotation, weather fetch, footer generation).
 - `assets/` — images, favicons, and data.
 
+P.S The images used are free images or AI generated. I am waiting for images from the restaurant.
+
 ## Features
 
 - Responsive layout
