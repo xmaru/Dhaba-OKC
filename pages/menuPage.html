@@ -33,17 +33,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/menuPage.css" />
   </head>
-  <body class="page-with-fixed-nav">
+  <body class="page-with-fixed-nav menu-page">
     <div id="site-header" data-active-page="menu"></div>
-    <main>
-      <h1>Our Menu</h1>
-      <p>Explore our delicious offerings below.</p>
-      <!-- Add menu items here -->
+
+    <main class="menu-page-main">
+      <div class="menu-page-inner">
+        <div id="menu-page-root"></div>
+      </div>
     </main>
+
     <footer>
       <p>&copy; 2025 Dhaba OKC. All rights reserved.</p>
     </footer>
     <script src="/utils/loadHeader.js"></script>
+    <script src="/js/menuPage.js"></script>
   </body>
 </html>

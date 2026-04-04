@@ -15,20 +15,23 @@
 }
 
 .catering-page-header h1 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 700;
   color: var(--text-color);
   margin-bottom: 1rem;
   line-height: 1.2;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
 }
 
 .catering-lead {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: clamp(1.05rem, 2.5vw, 1.2rem);
   line-height: 1.65;
-  color: var(--text-color);
-  opacity: 0.88;
+  color: var(--text-muted);
   max-width: 38rem;
   margin: 0 auto;
 }
@@ -58,13 +61,12 @@
 }
 
 .catering-search-label {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-color);
-  opacity: 0.75;
+  color: var(--text-muted);
   text-align: center;
 }
 
@@ -88,7 +90,7 @@ body.dark-mode .catering-search-row {
   min-width: 0;
   border: none;
   padding: 1rem 1.15rem;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   background: transparent;
   color: var(--text-color);
@@ -141,7 +143,7 @@ body.dark-mode .catering-search-row {
 }
 
 .catering-tab {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 600;
   padding: 0.55rem 1.1rem;
@@ -214,7 +216,7 @@ body.dark-mode .catering-card:hover {
 }
 
 .catering-card-title {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 1.08rem;
   font-weight: 600;
   line-height: 1.5;

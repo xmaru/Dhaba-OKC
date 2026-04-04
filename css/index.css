@@ -12,6 +12,12 @@
   --special-color: #ffc107;
   --price-color: #045017;
 
+  /* Shared typography (aligned with menu page) */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --accent-warm: #b8895c;
+  --text-muted: rgba(34, 34, 34, 0.78);
+
   /* old color: #f7931a */
 
   /* Container SYSTEM */
@@ -29,6 +35,8 @@ body.dark-mode {
   --card-bg: #1f1814;
   --border-card: #4a3b34;
   --price-color: #caffd3;
+  --accent-warm: #d4a574;
+  --text-muted: rgba(245, 245, 245, 0.72);
   /* --text-2nd-color: #b6a896; */
 }
 
@@ -49,7 +57,7 @@ body.dark-mode {
 
 h1,
 h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-heading);
   font-weight: 700;
 }
 
@@ -57,7 +65,7 @@ body,
 p,
 span,
 h3 {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
 }
 
 /* Apply background and transition */
@@ -76,7 +84,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1100;
   background: transparent;
   box-shadow: none;
   transition: all 0.3s ease;
@@ -256,21 +264,26 @@ body.page-with-fixed-nav main {
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  font-family: "Playfair Display", serif;
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  font-family: var(--font-heading);
   font-weight: 700;
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
 }
 
 .hero h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   margin-bottom: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.65;
   margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: var(--font-body);
 }
 
 .highlight {
@@ -394,12 +407,19 @@ body.page-with-fixed-nav main {
 }
 
 .buffet-header h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
 }
 
 .buffet-header p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 
 .buffet-container {
@@ -584,14 +604,20 @@ body.page-with-fixed-nav main {
 }
 
 .about-container h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
 }
 
 .about-text {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  line-height: 1.6;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  line-height: 1.65;
   margin-bottom: 25px;
+  font-family: var(--font-body);
+  max-width: 40rem;
 }
 
 .about-cards {
@@ -680,8 +706,20 @@ body.page-with-fixed-nav main {
 
 .contact-container h2 {
   margin-top: 50px;
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
+}
+
+.contact-header > p,
+.contact-container > .contact-header p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  line-height: 1.65;
 }
 
 .contact-container p {
