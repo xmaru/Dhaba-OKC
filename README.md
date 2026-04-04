@@ -87,9 +87,6 @@ Longterm goals:
   - Pay for the invoice online.
   - Store invoices in database (maybe for upto 30-60days)
 
-## License
-
-This project is provided under the MIT License.
 
 ## Contact / Author
 
