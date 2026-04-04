@@ -1,5 +1,5 @@
 /**
- * Dine-in / takeout menu page — loads sample data from /data/dineInMenuSample.json
+ * Dine-in / takeout menu page — loads menu data from /data/dineInMenuSample.json
  */
 (function () {
   "use strict";
@@ -7,80 +7,86 @@
   const root = document.getElementById("menu-page-root");
   if (!root) return;
 
-  function renderSpice(level) {
-    if (!level || level < 1) return null;
-    const max = 3;
-    const n = Math.min(Math.max(Math.round(level), 1), max);
+  function renderPriceBlock(item) {
     const wrap = document.createElement("div");
-    wrap.className = "menu-card-spice";
-    wrap.setAttribute("aria-label", `Spice level ${n} of ${max}`);
-    for (let i = 0; i < n; i++) {
-      const icon = document.createElement("i");
-      icon.className = "fa-solid fa-fire";
-      icon.setAttribute("aria-hidden", "true");
-      wrap.appendChild(icon);
+    wrap.className = "menu-row-prices";
+
+    if (item.small && item.large) {
+      [["Small", item.small], ["Large", item.large]].forEach(([label, val]) => {
+        const pair = document.createElement("span");
+        pair.className = "menu-price-pair";
+        const lab = document.createElement("span");
+        lab.className = "menu-price-label";
+        lab.textContent = `${label}:`;
+        const amt = document.createElement("span");
+        amt.className = "menu-price-value";
+        amt.textContent = val;
+        pair.appendChild(lab);
+        pair.appendChild(amt);
+        wrap.appendChild(pair);
+      });
+      return wrap;
     }
-    const label = document.createElement("span");
-    label.className = "menu-card-spice-label";
-    label.textContent = "Spicy";
-    wrap.appendChild(label);
+
+    const single = document.createElement("span");
+    single.className = "menu-row-price-single";
+    single.textContent = item.price || "";
+    wrap.appendChild(single);
     return wrap;
   }
 
-  function renderCard(item) {
-    const card = document.createElement("article");
-    card.className = "menu-card";
+  function renderRow(item) {
+    const row = document.createElement("article");
+    row.className = "menu-row";
 
-    const top = document.createElement("div");
-    top.className = "menu-card-top";
+    const head = document.createElement("div");
+    head.className = "menu-row-head";
 
     const name = document.createElement("h3");
-    name.className = "menu-card-name";
+    name.className = "menu-row-name";
     name.textContent = item.name;
 
-    const price = document.createElement("span");
-    price.className = "menu-card-price";
-    price.textContent = item.price;
-
-    top.appendChild(name);
-    top.appendChild(price);
+    head.appendChild(name);
+    head.appendChild(renderPriceBlock(item));
 
     const desc = document.createElement("p");
-    desc.className = "menu-card-desc";
+    desc.className = "menu-row-desc";
     desc.textContent = item.description;
 
-    card.appendChild(top);
-    card.appendChild(desc);
-
-    const spice = renderSpice(item.spicy);
-    if (spice) card.appendChild(spice);
+    row.appendChild(head);
+    row.appendChild(desc);
 
     if (item.note) {
       const note = document.createElement("p");
-      note.className = "menu-card-note";
+      note.className = "menu-row-note";
       note.textContent = item.note;
-      card.appendChild(note);
+      row.appendChild(note);
     }
 
-    return card;
+    return row;
   }
 
   function render(data) {
     root.innerHTML = "";
 
-    const header = document.createElement("header");
+    const header = document.createElement("section");
     header.className = "menu-page-header";
+
+    const titleWrap = document.createElement("div");
+    titleWrap.className = "menu-page-title-wrap";
 
     const h1 = document.createElement("h1");
     h1.className = "menu-page-title";
     h1.id = "menu-page-title";
     h1.textContent = data.title;
 
+    titleWrap.appendChild(h1);
+
     const sub = document.createElement("p");
     sub.className = "menu-page-subtitle";
     sub.textContent = data.subtitle;
 
-    header.appendChild(h1);
+    header.appendChild(titleWrap);
     header.appendChild(sub);
     root.appendChild(header);
 
@@ -89,20 +95,32 @@
       sec.className = "menu-section";
       sec.setAttribute("aria-labelledby", `section-${section.id}`);
 
+      const headRow = document.createElement("div");
+      headRow.className = "menu-section-head";
+
       const h2 = document.createElement("h2");
       h2.className = "menu-section-title";
       h2.id = `section-${section.id}`;
       h2.textContent = section.title;
 
-      const grid = document.createElement("div");
-      grid.className = "menu-card-grid";
+      headRow.appendChild(h2);
+
+      if (section.sectionNote) {
+        const sn = document.createElement("p");
+        sn.className = "menu-section-note";
+        sn.textContent = section.sectionNote;
+        headRow.appendChild(sn);
+      }
+
+      const list = document.createElement("div");
+      list.className = "menu-section-list";
 
       section.items.forEach((item) => {
-        grid.appendChild(renderCard(item));
+        list.appendChild(renderRow(item));
       });
 
-      sec.appendChild(h2);
-      sec.appendChild(grid);
+      sec.appendChild(headRow);
+      sec.appendChild(list);
       root.appendChild(sec);
     });
   }

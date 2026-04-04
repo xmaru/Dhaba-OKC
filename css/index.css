@@ -71,6 +71,8 @@ h3 {
 /* Apply background and transition */
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.4s ease, color 0.4s ease;
@@ -220,6 +222,7 @@ header.navbar-solid .mode-toggle:hover {
    HERO / MAIN AREA
    =========================== */
 main {
+  flex: 1 0 auto;
   padding: 0;
   margin: 0;
 }
@@ -839,6 +842,83 @@ footer {
   color: var(--footer-text-color);
 }
 
+/* Detailed footer layout used on menu/catering pages */
+.footer-contact {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  align-items: start;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.footer-contact-col {
+  min-width: 0;
+}
+
+.footer-contact-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.footer-contact-heading {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.footer-contact-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--footer-text-color);
+  opacity: 0.9;
+  margin: 0 0 0.35rem;
+}
+
+.footer-contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.footer-contact .footer-link {
+  text-decoration: none;
+  color: var(--footer-text-color);
+  transition: color 0.2s ease;
+}
+
+.footer-contact .footer-link:visited {
+  color: var(--footer-text-color);
+}
+
+.footer-contact .footer-link:hover {
+  color: var(--accent-color);
+}
+
+.footer-contact .footer-link.footer-contact-direct {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-contact-copy {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
 /***************/
 /* MEDIA QUERIES */
 /***************/
@@ -1017,5 +1097,18 @@ footer {
   .address-card a,
   .contact-text p {
     font-size: 0.7rem;
+  }
+
+  .footer-contact {
+    padding: 0 1rem;
+  }
+
+  .footer-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-contact .footer-link.footer-contact-direct {
+    text-decoration: underline;
   }
 }

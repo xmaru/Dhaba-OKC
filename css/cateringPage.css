@@ -139,7 +139,10 @@ body.dark-mode .catering-search-row {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.65rem 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.8rem;
+  overflow-x: visible;
+  padding-bottom: 0.35rem;
+  scrollbar-width: thin;
 }
 
 .catering-tab {
@@ -175,6 +178,14 @@ body.dark-mode .catering-search-row {
   filter: brightness(1.05);
 }
 
+.catering-results-meta {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.9rem;
+  text-align: center;
+}
+
 /* Grid — larger cards, more gap */
 .catering-grid {
   display: grid;
@@ -202,17 +213,17 @@ body.dark-mode .catering-card {
 }
 
 .catering-card:hover {
-  transform: translateY(-4px) scale(1.02);
+  transform: translateY(-2px);
   border-color: rgba(55, 178, 77, 0.45);
   box-shadow:
-    0 14px 36px rgba(55, 178, 77, 0.16),
+    0 8px 20px rgba(55, 178, 77, 0.12),
     0 0 0 1px rgba(55, 178, 77, 0.18);
 }
 
 body.dark-mode .catering-card:hover {
   box-shadow:
-    0 16px 40px rgba(55, 178, 77, 0.12),
-    0 0 24px rgba(55, 178, 77, 0.1);
+    0 10px 24px rgba(55, 178, 77, 0.1),
+    0 0 18px rgba(55, 178, 77, 0.08);
 }
 
 .catering-card-title {
@@ -242,7 +253,7 @@ body.dark-mode .catering-card:hover {
   }
 
   .catering-tabs {
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
     gap: 0.5rem;
   }
 
