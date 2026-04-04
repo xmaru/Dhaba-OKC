@@ -12,6 +12,12 @@
   --special-color: #ffc107;
   --price-color: #045017;
 
+  /* Shared typography (aligned with menu page) */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --accent-warm: #b8895c;
+  --text-muted: rgba(34, 34, 34, 0.78);
+
   /* old color: #f7931a */
 
   /* Container SYSTEM */
@@ -29,6 +35,8 @@ body.dark-mode {
   --card-bg: #1f1814;
   --border-card: #4a3b34;
   --price-color: #caffd3;
+  --accent-warm: #d4a574;
+  --text-muted: rgba(245, 245, 245, 0.72);
   /* --text-2nd-color: #b6a896; */
 }
 
@@ -49,7 +57,7 @@ body.dark-mode {
 
 h1,
 h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-heading);
   font-weight: 700;
 }
 
@@ -57,12 +65,14 @@ body,
 p,
 span,
 h3 {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
 }
 
 /* Apply background and transition */
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-color);
   color: var(--text-color);
   transition: background 0.4s ease, color 0.4s ease;
@@ -76,7 +86,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1100;
   background: transparent;
   box-shadow: none;
   transition: all 0.3s ease;
@@ -151,8 +161,22 @@ body.dark-mode header.navbar-solid {
   transition: color 0.2s ease;
 }
 
+.nav-links a.active {
+  color: var(--accent-color);
+}
+
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
 header:not(.navbar-solid) .nav-links a {
   color: #fff;
+}
+
+header:not(.navbar-solid) .nav-links a.active {
+  color: var(--accent-color);
 }
 
 header:not(.navbar-solid) .nav-links a:hover {
@@ -198,8 +222,13 @@ header.navbar-solid .mode-toggle:hover {
    HERO / MAIN AREA
    =========================== */
 main {
+  flex: 1 0 auto;
   padding: 0;
   margin: 0;
+}
+
+body.page-with-fixed-nav main {
+  padding-top: 5rem;
 }
 
 .hero {
@@ -238,21 +267,26 @@ main {
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  font-family: "Playfair Display", serif;
+  font-size: clamp(2.75rem, 6vw, 4rem);
+  font-family: var(--font-heading);
   font-weight: 700;
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
 }
 
 .hero h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   margin-bottom: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.65;
   margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: var(--font-body);
 }
 
 .highlight {
@@ -376,12 +410,19 @@ main {
 }
 
 .buffet-header h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
 }
 
 .buffet-header p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 
 .buffet-container {
@@ -566,14 +607,20 @@ main {
 }
 
 .about-container h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
 }
 
 .about-text {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  line-height: 1.6;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  line-height: 1.65;
   margin-bottom: 25px;
+  font-family: var(--font-body);
+  max-width: 40rem;
 }
 
 .about-cards {
@@ -662,8 +709,20 @@ main {
 
 .contact-container h2 {
   margin-top: 50px;
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-warm);
+  display: inline-block;
+}
+
+.contact-header > p,
+.contact-container > .contact-header p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  line-height: 1.65;
 }
 
 .contact-container p {
@@ -781,6 +840,83 @@ footer {
 
 .footer-link:visited {
   color: var(--footer-text-color);
+}
+
+/* Detailed footer layout used on menu/catering pages */
+.footer-contact {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  align-items: start;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.footer-contact-col {
+  min-width: 0;
+}
+
+.footer-contact-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.footer-contact-heading {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.footer-contact-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--footer-text-color);
+  opacity: 0.9;
+  margin: 0 0 0.35rem;
+}
+
+.footer-contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.footer-contact .footer-link {
+  text-decoration: none;
+  color: var(--footer-text-color);
+  transition: color 0.2s ease;
+}
+
+.footer-contact .footer-link:visited {
+  color: var(--footer-text-color);
+}
+
+.footer-contact .footer-link:hover {
+  color: var(--accent-color);
+}
+
+.footer-contact .footer-link.footer-contact-direct {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-contact-copy {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  opacity: 0.85;
 }
 
 /***************/
@@ -945,5 +1081,34 @@ footer {
   .hero-buttons {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .weather-card img {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+  }
+
+  .contact-text h3 {
+    font-size: 1rem;
+  }
+
+  .phone-card a,
+  .address-card a,
+  .contact-text p {
+    font-size: 0.7rem;
+  }
+
+  .footer-contact {
+    padding: 0 1rem;
+  }
+
+  .footer-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-contact .footer-link.footer-contact-direct {
+    text-decoration: underline;
   }
 }

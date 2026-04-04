@@ -1,0 +1,1427 @@
+[
+  {
+    "id": "achari-chicken",
+    "name": "Achari Chicken",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "beef-chili",
+    "name": "Beef Chili",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 85,
+      "medium": 125,
+      "large": 180,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "beef-dhum-keema",
+    "name": "Beef Dhum Keema",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 170,
+      "small_box": 17,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "beef-haleem",
+    "name": "Beef Haleem",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 45,
+      "small": 90,
+      "medium": 135,
+      "large": 190,
+      "small_box": 18,
+      "big_box": 35
+    }
+  },
+  {
+    "id": "beef-keema",
+    "name": "Beef Keema",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 170,
+      "small_box": 17,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "beef-kofta",
+    "name": "Beef Kofta",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 45,
+      "small": 80,
+      "medium": 125,
+      "large": 175,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "beef-korma",
+    "name": "Beef Korma",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 175,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "butter-chicken",
+    "name": "Butter Chicken",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 70,
+      "medium": 110,
+      "large": 140,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "chicken-curry",
+    "name": "Chicken Curry",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "chicken-dhum-keema",
+    "name": "Chicken Dhum Keema",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 70,
+      "medium": 105,
+      "large": 140,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "chicken-haleem",
+    "name": "Chicken Haleem",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 170,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "chicken-karahi",
+    "name": "Chicken Karahi",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "chicken-keema",
+    "name": "Chicken Keema",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 70,
+      "medium": 105,
+      "large": 140,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "chicken-kofta",
+    "name": "Chicken Kofta",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 70,
+      "medium": 110,
+      "large": 140,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "chicken-korma",
+    "name": "Chicken Korma",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "chicken-manchurian",
+    "name": "Chicken Manchurian",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 70,
+      "medium": 105,
+      "large": 140,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "chicken-muthi-kabab",
+    "name": "Chicken Muthi Kabab",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 160,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "chilli-chicken",
+    "name": "Chilli Chicken",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 70,
+      "medium": 105,
+      "large": 140,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "nargasi-kofta",
+    "name": "Nargasi Kofta",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 70,
+      "medium": 110,
+      "large": 140,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "duwa-beef",
+    "name": "Duwa Beef",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 175,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "goat-curry",
+    "name": "Goat Curry",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 170,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "goat-karahi",
+    "name": "Goat Karahi",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 170,
+      "small_box": 18,
+      "big_box": 35
+    }
+  },
+  {
+    "id": "goat-korma",
+    "name": "Goat Korma",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 170,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "shinwari-chicken",
+    "name": "Shinwari Chicken",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 70,
+      "medium": 110,
+      "large": 140,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "sweet-n-sour-chicken",
+    "name": "Sweet 'n' Sour Chicken",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 70,
+      "medium": 105,
+      "large": 140,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "white-chicken-karahi",
+    "name": "White Chicken Karahi",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "beef-nihari",
+    "name": "Beef Nihari",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 150,
+      "small_box": 17,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "chicken-65",
+    "name": "Chicken 65",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 70,
+      "medium": 105,
+      "large": 140,
+      "small_box": 15,
+      "big_box": 25
+    }
+  },
+  {
+    "id": "mutton-achari-ghost",
+    "name": "Mutton Achari Ghost",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 170,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "palak-chicken",
+    "name": "Palak Chicken",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "palak-ghost",
+    "name": "Palak Ghost",
+    "category": "Meat",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 170,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "paneer-bhurji",
+    "name": "Paneer Bhurji",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 160,
+      "small_box": 16,
+      "big_box": 30
+    }
+  },
+  {
+    "id": "fried-fish",
+    "name": "Fried Fish",
+    "category": "Seafood",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 170
+    }
+  },
+  {
+    "id": "lahori-fish",
+    "name": "Lahori Fish",
+    "category": "Seafood",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 170
+    }
+  },
+  {
+    "id": "fish-karahi",
+    "name": "Fish Karahi",
+    "category": "Seafood",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 170,
+      "small_box": 15,
+      "big_box": 25
+    }
+  },
+  {
+    "id": "chicken-pasta",
+    "name": "Chicken Pasta",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 13,
+      "big_box": 22
+    }
+  },
+  {
+    "id": "chick-noodles",
+    "name": "Chicken Noodles",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 13,
+      "big_box": 23
+    }
+  },
+  {
+    "id": "veggie-chow-mein",
+    "name": "Veggie Chow Mein",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "veggie-pasta",
+    "name": "Veggie Pasta",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 12,
+      "big_box": 22
+    }
+  },
+  {
+    "id": "channa-pulao",
+    "name": "Channa Pulao",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 80,
+      "large": 100,
+      "small_box": 13,
+      "big_box": 23
+    }
+  },
+  {
+    "id": "zeera-rice",
+    "name": "Zeera Rice",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 20,
+      "small": 40,
+      "medium": 69,
+      "large": 80,
+      "small_box": 6,
+      "big_box": 13
+    }
+  },
+  {
+    "id": "chicken-biryani",
+    "name": "Chicken Biryani",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "boneless-chick-biryani",
+    "name": "Boneless Chicken Biryani",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "chicken-biryani-sindhi",
+    "name": "Chicken Biryani Sindhi",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 15,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "chicken-pulao",
+    "name": "Chicken Pulao",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 15,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "goat-biryani",
+    "name": "Goat Biryani",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 150,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "goat-pulao",
+    "name": "Goat Pulao",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 150,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "mutter-pulao",
+    "name": "Mutter Pulao",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 80,
+      "large": 100,
+      "small_box": 13,
+      "big_box": 23
+    }
+  },
+  {
+    "id": "afghani-pulao",
+    "name": "Afghani Pulao",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 150,
+      "small_box": 16,
+      "big_box": 28
+    }
+  },
+  {
+    "id": "chicken-chow-mein",
+    "name": "Chicken Chow Mein",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 13,
+      "big_box": 23
+    }
+  },
+  {
+    "id": "channa-masala",
+    "name": "Channa Masala",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 45,
+      "medium": 70,
+      "large": 90,
+      "small_box": 9,
+      "big_box": 18
+    }
+  },
+  {
+    "id": "curry-pakora",
+    "name": "Curry Pakora",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "daal-mash",
+    "name": "Daal Mash",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 9,
+      "big_box": 18
+    }
+  },
+  {
+    "id": "aaloo-palak",
+    "name": "Aaloo Palak",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "aloo-bhujia",
+    "name": "Aloo Bhujia",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "bhindi-masala",
+    "name": "Bhindi Masala",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 50,
+      "medium": 75,
+      "large": 150,
+      "small_box": 11,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "channa-daal",
+    "name": "Channa Daal",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "daal-makhani",
+    "name": "Daal Makhani",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "malai-kofta",
+    "name": "Malai Kofta",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "masoor-daal",
+    "name": "Masoor Daal",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "aloo-channa",
+    "name": "Aloo Channa",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "mixed-daal",
+    "name": "Mixed Daal",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "mixed-vegetable",
+    "name": "Mixed Vegetable",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "saag",
+    "name": "Saag",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 45,
+      "medium": 75,
+      "large": 90,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "mutter-paneer",
+    "name": "Mutter Paneer",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 60,
+      "medium": 90,
+      "large": 120,
+      "small_box": 11,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "palak-paneer",
+    "name": "Palak Paneer",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 60,
+      "medium": 90,
+      "large": 120,
+      "small_box": 11,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "paneer-karahi",
+    "name": "Paneer Karahi",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 60,
+      "medium": 90,
+      "large": 120,
+      "small_box": 14,
+      "big_box": 24
+    }
+  },
+  {
+    "id": "paneer-tikka-masala",
+    "name": "Paneer Tikka Masala",
+    "category": "Veggie",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 60,
+      "medium": 90,
+      "large": 120,
+      "small_box": 14,
+      "big_box": 26
+    }
+  },
+  {
+    "id": "veggie-biyrani",
+    "name": "Veggie Biyrani",
+    "category": "Rice & Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "tawa-roti",
+    "name": "Tawa Roti",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "id": "tandoori-roti",
+    "name": "Tandoori Roti",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 2
+    }
+  },
+  {
+    "id": "naan",
+    "name": "Naan",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 2
+    }
+  },
+  {
+    "id": "garlic-naan",
+    "name": "Garlic Naan",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 2.5
+    }
+  },
+  {
+    "id": "plain-paratha",
+    "name": "Plain Paratha",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 3
+    }
+  },
+  {
+    "id": "aloo-paratha",
+    "name": "Aloo Paratha",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 5
+    }
+  },
+  {
+    "id": "puri",
+    "name": "Puri",
+    "category": "Bread",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "id": "tandoori-chicken-leg",
+    "name": "Tandoori Chicken Leg",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 3.5
+    }
+  },
+  {
+    "id": "veggie-pakora",
+    "name": "Veggie Pakora",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 8,
+      "big_box": 12
+    }
+  },
+  {
+    "id": "dahi-bhalla",
+    "name": "Dahi Bhalla",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 80,
+      "large": 100,
+      "small_box": 7,
+      "big_box": 15
+    }
+  },
+  {
+    "id": "chick-sliders",
+    "name": "Chicken Sliders",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 2
+    }
+  },
+  {
+    "id": "bun-kabob",
+    "name": "Bun Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 5
+    }
+  },
+  {
+    "id": "cold-sandwich",
+    "name": "Cold Sandwich",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 4
+    }
+  },
+  {
+    "id": "chick-spring-rolls",
+    "name": "Chicken Spring Rolls",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "id": "veggie-spring-rolls",
+    "name": "Veggie Spring Rolls",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "id": "channa-chaat",
+    "name": "Channa Chaat",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 7,
+      "big_box": 14
+    }
+  },
+  {
+    "id": "dahi-phulki",
+    "name": "Dahi Phulki",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 20,
+      "small": 40,
+      "medium": 60,
+      "large": 80,
+      "small_box": 5,
+      "big_box": 10
+    }
+  },
+  {
+    "id": "fruit-chaat",
+    "name": "Fruit Chaat",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 75,
+      "medium": 115,
+      "large": 150,
+      "small_box": 10,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "salad",
+    "name": "Salad",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 15,
+      "small": 30,
+      "medium": 45,
+      "large": 70
+    }
+  },
+  {
+    "id": "russian-salad",
+    "name": "Russian Salad",
+    "category": "Appetizers",
+    "type": "tray",
+    "prices": {
+      "quarter": 20,
+      "small": 40,
+      "medium": 60,
+      "large": 100
+    }
+  },
+  {
+    "id": "veggie-samosa",
+    "name": "Veggie Samosa",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "id": "chicken-samosa",
+    "name": "Chicken Samosa",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 2.5
+    }
+  },
+  {
+    "id": "chicken-seekh-kabob",
+    "name": "Chicken Seekh Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 4
+    }
+  },
+  {
+    "id": "beef-seekh-kabob",
+    "name": "Beef Seekh Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 5
+    }
+  },
+  {
+    "id": "chicken-chapli-kabob",
+    "name": "Chicken Chapli Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 3
+    }
+  },
+  {
+    "id": "beef-chapli-kabob",
+    "name": "Beef Chapli Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 4
+    }
+  },
+  {
+    "id": "chicken-shami-kabob",
+    "name": "Chicken Shami Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 3
+    }
+  },
+  {
+    "id": "frozen-chick-shami-kabob",
+    "name": "Frozen Chicken Shami Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 2.5
+    }
+  },
+  {
+    "id": "beef-shami-kabob",
+    "name": "Beef Shami Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 4
+    }
+  },
+  {
+    "id": "frozen-beef-shami-kabob",
+    "name": "Frozen Beef Shami Kabob",
+    "category": "Appetizers",
+    "type": "piece",
+    "prices": {
+      "each": 3.5
+    }
+  },
+  {
+    "id": "gajjar-halwa",
+    "name": "Gajjar Halwa",
+    "category": "Dessert",
+    "type": "tray",
+    "prices": {
+      "quarter": 40,
+      "small": 80,
+      "medium": 120,
+      "large": 160,
+      "small_box": 9,
+      "big_box": 20
+    }
+  },
+  {
+    "id": "gajrela",
+    "name": "Gajrela",
+    "category": "Dessert",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130,
+      "small_box": 7,
+      "big_box": 15
+    }
+  },
+  {
+    "id": "gulab-jamun",
+    "name": "Gulab Jamun",
+    "category": "Dessert",
+    "type": "piece",
+    "prices": {
+      "each": 1.25
+    }
+  },
+  {
+    "id": "ras-malai",
+    "name": "Ras Malai",
+    "category": "Dessert",
+    "type": "piece",
+    "prices": {
+      "each": 1.25
+    }
+  },
+  {
+    "id": "sooji-halwa",
+    "name": "Sooji Halwa",
+    "category": "Dessert",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 9,
+      "big_box": 18
+    }
+  },
+  {
+    "id": "zarda",
+    "name": "Zarda",
+    "category": "Dessert",
+    "type": "tray",
+    "prices": {
+      "quarter": 35,
+      "small": 65,
+      "medium": 100,
+      "large": 130
+    }
+  },
+  {
+    "id": "Kheer",
+    "name": "Kheer",
+    "category": "Dessert",
+    "type": "tray",
+    "prices": {
+      "quarter": 25,
+      "small": 50,
+      "medium": 75,
+      "large": 100,
+      "small_box": 6,
+      "big_box": 12
+    }
+  },
+  {
+    "id": "special-kheer",
+    "name": "Special Kheer",
+    "category": "Dessert",
+    "type": "tray",
+    "prices": {
+      "quarter": 30,
+      "small": 60,
+      "medium": 90,
+      "large": 120,
+      "small_box": 7,
+      "big_box": 13
+    }
+  },
+  {
+    "id": "chai",
+    "name": "Chai",
+    "category": "Others",
+    "type": "piece",
+    "prices": {
+      "each": 1.5
+    }
+  },
+  {
+    "id": "kashmiri-chai",
+    "name": "Kashmiri Chai",
+    "category": "Others",
+    "type": "piece",
+    "prices": {
+      "each": 2
+    }
+  },
+  {
+    "id": "raita",
+    "name": "Raita",
+    "category": "Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 10,
+      "small_box": 0,
+      "big_box": 0
+    }
+  },
+  {
+    "id": "green-chutney",
+    "name": "Green Chutney",
+    "category": "Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 10,
+      "small_box": 0,
+      "big_box": 0
+    }
+  },
+  {
+    "id": "imli-chutney",
+    "name": "Imli Chutney",
+    "category": "Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 10,
+      "small_box": 0,
+      "big_box": 0
+    }
+  },
+  {
+    "id": "plain-dahi",
+    "name": "Plain Dahi",
+    "category": "Others",
+    "type": "tray",
+    "prices": {
+      "quarter": 10,
+      "small_box": 0,
+      "big_box": 0
+    }
+  }
+]

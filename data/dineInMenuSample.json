@@ -1,0 +1,261 @@
+{
+  "title": "Dine-In & Takeout Menu",
+  "subtitle": "Authentic Indo-Pak cuisine in Oklahoma City",
+  "sections": [
+    {
+      "id": "appetizers",
+      "title": "Appetizers",
+      "items": [
+        {
+          "name": "Veggie Pakora",
+          "price": "$7.99",
+          "description": "Onions and potatoes fried in a thick gram flour batter of freshly ground spices."
+        },
+        {
+          "name": "Paneer Pakora",
+          "price": "$8.99",
+          "description": "Cubes of Indian cheese deep fried in a unique gram flour batter prepared with a combination of freshly ground spices."
+        },
+        {
+          "name": "Veggie Samosa",
+          "price": "$2.99",
+          "description": "Deep fried patties stuffed with fresh potatoes, chickpeas, and freshly ground spices."
+        },
+        {
+          "name": "Tandoori Chicken",
+          "price": "$3.50",
+          "description": "Roasted chicken marinated in a tenderizing mixture of yogurt, lemon juice and spices. Served as one leg and thigh."
+        }
+      ]
+    },
+    {
+      "id": "chicken",
+      "title": "Chicken Dishes",
+      "sectionNote": "Comes with white rice, can substitute for naan.",
+      "items": [
+        {
+          "name": "Chicken Korma",
+          "small": "$13.99",
+          "large": "$23.99",
+          "description": "Chicken braised with yogurt and spices, with gravy."
+        },
+        {
+          "name": "Chicken Biryani",
+          "small": "$13.99",
+          "large": "$23.99",
+          "description": "Tender marinated chicken quarters layered with fragrant long-grain rice and traditional spices."
+        },
+        {
+          "name": "Chicken Curry",
+          "small": "$13.99",
+          "large": "$23.99",
+          "description": "Chicken leg quarters cooked in a traditional onion and tomato sauce."
+        },
+        {
+          "name": "Chicken Tikka Masala",
+          "small": "$13.99",
+          "large": "$23.99",
+          "description": "Boneless chicken pieces cooked in a tastefully seasoned onion, tomato and cream sauce."
+        },
+        {
+          "name": "Butter Chicken",
+          "small": "$13.99",
+          "large": "$23.99",
+          "description": "Chicken cooked in a mild buttery onion, tomato cream sauce, seasoned with herbs and mild spices."
+        },
+        {
+          "name": "Chicken Seekh Kabob",
+          "price": "$3.99",
+          "description": "Mince with onions and spices to form rolled kabobs."
+        },
+        {
+          "name": "Chicken Seekh Kabob Roll",
+          "price": "$8.99",
+          "description": "Seekh kabob rolled in naan with onions, lettuce, tomatoes and sauce."
+        }
+      ]
+    },
+    {
+      "id": "goat-beef",
+      "title": "Goat / Beef Dishes",
+      "sectionNote": "Comes with white rice, can substitute for naan.",
+      "items": [
+        {
+          "name": "Aloo Gosht",
+          "small": "$14.99",
+          "large": "$26.99",
+          "description": "Goat gravy with potatoes cooked in thick stew."
+        },
+        {
+          "name": "Goat Curry",
+          "small": "$15.99",
+          "large": "$27.99",
+          "description": "Goat cooked in gravy with onions and tomato sauce."
+        },
+        {
+          "name": "Goat Biryani",
+          "small": "$15.99",
+          "large": "$27.99",
+          "description": "Goat cooked in a flavorful rice mixture with added spices and paste."
+        },
+        {
+          "name": "Beef Gyro",
+          "price": "$8.99",
+          "description": "Beef gyro wrap served with tzatziki sauce."
+        }
+      ]
+    },
+    {
+      "id": "vegetarian",
+      "title": "Vegetarian Dishes",
+      "items": [
+        {
+          "name": "Veggie Biryani",
+          "small": "$12.99",
+          "large": "$22.99",
+          "description": "Fresh vegetables blended with special herbs and spices, cooked with saffron flavored basmati rice."
+        },
+        {
+          "name": "Malai Kofta",
+          "small": "$13.99",
+          "large": "$23.99",
+          "description": "Vegetarian malai kofta cooked in a creamy gravy made of tomatoes and cashew nuts."
+        },
+        {
+          "name": "Daal Makhni",
+          "small": "$9.99",
+          "large": "$19.99",
+          "description": "Rich, velvety black lentils and kidney beans slow-cooked with butter and cream for a decadent finish."
+        },
+        {
+          "name": "Chana Daal",
+          "small": "$8.99",
+          "large": "$17.99",
+          "description": "Hearty split chickpeas simmered in a mildly spiced onion-tomato sauce and tempered with aromatic cumin."
+        },
+        {
+          "name": "Mutter Paneer",
+          "small": "$12.99",
+          "large": "$23.99",
+          "description": "Green peas with paneer cheese in a tastefully spiced mild onion and tomato sauce."
+        },
+        {
+          "name": "Veggie Korma",
+          "small": "$10.99",
+          "large": "$19.99",
+          "description": "Vegetarian korma made with potatoes, carrots, and peas in a creamy sauce."
+        },
+        {
+          "name": "Mixed Veggie",
+          "small": "$10.99",
+          "large": "$19.99",
+          "description": "Potatoes, carrots, and peas cooked with spices."
+        },
+        {
+          "name": "Aloo Gobi",
+          "small": "$10.99",
+          "large": "$19.99",
+          "description": "Vegetable dish made with potatoes and cauliflower cooked with spices."
+        },
+        {
+          "name": "Palak Paneer",
+          "small": "$10.99",
+          "large": "$19.99",
+          "description": "Spinach cooked with paneer cheese in a tastefully spiced mild onion and tomato sauce."
+        },
+        {
+          "name": "Paneer Tikka Masala",
+          "small": "$13.99",
+          "large": "$25.99",
+          "description": "Smooth creamy gravy with Pakistani spices combined with the smoky flavor of paneer cheese."
+        },
+        {
+          "name": "Paneer Karahi",
+          "small": "$15.99",
+          "large": "$27.99",
+          "description": "Paneer stir fry."
+        },
+        {
+          "name": "Paneer Bhurji",
+          "small": "$15.99",
+          "large": "$29.99",
+          "description": "Scrambled paneer cheese with spices."
+        },
+        {
+          "name": "Anda Bhurji",
+          "small": "$9.99",
+          "large": "$17.99",
+          "description": "Scrambled eggs with mild spices and seasoning."
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "title": "Desserts",
+      "items": [
+        {
+          "name": "Kheer",
+          "price": "$4.99",
+          "description": "Homemade creamy rice pudding."
+        },
+        {
+          "name": "Gajar Halwa",
+          "price": "$4.99",
+          "description": "Creamy traditional pudding made with freshly grated carrots, milk and sugar, topped with nuts."
+        },
+        {
+          "name": "Barfi",
+          "price": "$4.99",
+          "description": "Mithai made from dense milk—a sweet fudge-like treat."
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "title": "Sides",
+      "items": [
+        {
+          "name": "French Fries",
+          "price": "$1.99",
+          "description": "Optional topping of chaat masala.",
+          "note": "Ask for chaat masala if you'd like."
+        },
+        {
+          "name": "Raita",
+          "price": "$3.99",
+          "description": "Yogurt sauce made with a little bit of seasoning."
+        },
+        {
+          "name": "Tawa Roti",
+          "price": "$1.50",
+          "description": "Flatbread made with flour, cooked on a stovetop."
+        },
+        {
+          "name": "Tandoori Roti",
+          "price": "$1.99",
+          "description": "Flatbread made with flour, cooked in the tandoor oven."
+        },
+        {
+          "name": "Tandoori Naan",
+          "price": "$1.99",
+          "description": "Leavened naan bread cooked in the tandoor oven."
+        },
+        {
+          "name": "Garlic Naan",
+          "price": "$2.49",
+          "description": "Naan topped with garlic and cilantro."
+        },
+        {
+          "name": "Aloo Paratha",
+          "price": "$4.99",
+          "description": "Flatbread made with wheat, stuffed with mashed potatoes, spices and herbs."
+        },
+        {
+          "name": "Plain Paratha",
+          "price": "$2.99",
+          "description": "Plain traditional flatbread."
+        }
+      ]
+    }
+  ]
+}
