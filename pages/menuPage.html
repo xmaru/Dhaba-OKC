@@ -4,35 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu - Dhaba OKC</title>
-
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="/css/index.css" />
   </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <h2>
-          <img
-            src="/assets/images/TransparentLogoBig.png"
-            alt="Dhaba OKC"
-            class="logo"
-            width="50px"
-            height="50px"
-          />
-        </h2>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./menuPage.html" class="active">Menu</a></li>
-          <li><a href="./cateringPage.html">Catering</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-        <button id="modeToggle" class="mode-toggle">
-          <i class="fa-regular fa-sun"></i>
-        </button>
-      </nav>
-    </header>
+  <body class="page-with-fixed-nav">
+    <div id="site-header" data-active-page="menu"></div>
     <main>
       <h1>Our Menu</h1>
       <p>Explore our delicious offerings below.</p>
@@ -41,5 +44,6 @@
     <footer>
       <p>&copy; 2025 Dhaba OKC. All rights reserved.</p>
     </footer>
+    <script src="/utils/loadHeader.js"></script>
   </body>
 </html>

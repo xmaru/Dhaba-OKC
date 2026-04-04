@@ -50,32 +50,7 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <h2>
-          <img
-            src="/assets/images/TransparentLogoBig.png"
-            alt="dhaba logo, a chicken rice bowl"
-            class="logo"
-          />
-        </h2>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="pages/menuPage.html">Menu</a></li>
-          <li><a href="pages/cateringPage.html">Catering</a></li>
-          <li>
-            <button id="modeToggle" class="mode-toggle">
-              <i class="fa-regular fa-sun"></i>
-            </button>
-          </li>
-        </ul>
-        <button class="nav-hamburger" id="hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </nav>
-    </header>
+    <div id="site-header" data-active-page="home"></div>
     <main>
       <section class="hero" id="home">
         <div class="overlay"></div>
@@ -380,6 +355,7 @@
     <footer>
       <div class="footer"></div>
     </footer>
+    <script src="/utils/loadHeader.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>

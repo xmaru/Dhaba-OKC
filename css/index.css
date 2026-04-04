@@ -151,8 +151,22 @@ body.dark-mode header.navbar-solid {
   transition: color 0.2s ease;
 }
 
+.nav-links a.active {
+  color: var(--accent-color);
+}
+
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
 header:not(.navbar-solid) .nav-links a {
   color: #fff;
+}
+
+header:not(.navbar-solid) .nav-links a.active {
+  color: var(--accent-color);
 }
 
 header:not(.navbar-solid) .nav-links a:hover {
@@ -200,6 +214,10 @@ header.navbar-solid .mode-toggle:hover {
 main {
   padding: 0;
   margin: 0;
+}
+
+body.page-with-fixed-nav main {
+  padding-top: 5rem;
 }
 
 .hero {
