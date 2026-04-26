@@ -335,8 +335,9 @@ body.page-with-fixed-nav main {
 }
 
 a.btn-hero {
+  /* Keep same label color as .btn-hero (#1f1810); do not override with white. */
   text-decoration: none;
-  color: #fff;
+  color: #1f1810;
 }
 
 /* Glass Button */

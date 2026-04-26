@@ -118,14 +118,11 @@ let day = new Date().getDay(); // 0 - Sunday, 1 - Monday, ..., 6 - Saturday
 // day = 3;
 
 if (day === 3) {
-  // Grab Chicken Curry card and Special Day card elements
   const chickenCurryCard = document.querySelector(".chicken-curry-card");
-  // Hide the Chicken Curry card on Wednesdays
-  chickenCurryCard.style.display = "none";
+  if (chickenCurryCard) chickenCurryCard.style.display = "none";
 } else {
-  // Hide the Special Day card (goat curry) on all other days
   const specialDayCard = document.querySelector(".special-day-card");
-  specialDayCard.style.display = "none";
+  if (specialDayCard) specialDayCard.style.display = "none";
 }
 
 // ///////////////////
