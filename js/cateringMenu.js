@@ -1,5 +1,6 @@
 /**
- * Catering menu: loads menu.json with category tabs + search (no prices).
+ * Catering menu: loads menu.json with category tabs + search (names only).
+ * Defaults to all categories, grouped by section; tabs narrow the list.
  */
 (function () {
   "use strict";
@@ -17,27 +18,29 @@
   ];
 
   const TAB_LABELS = {
-    all: "All",
+    all: "All categories",
     Meat: "Meat",
     Seafood: "Seafood",
     Veggies: "Veggies",
-    "Rice and Others": "Rice and Others",
+    "Rice and Others": "Rice & others",
     Bread: "Bread",
     Appetizers: "Appetizers",
     Desserts: "Desserts",
     Others: "Others",
   };
 
+  const CATEGORY_ORDER = TABS.filter((t) => t !== "all");
+
   const tabsEl = document.getElementById("catering-tabs");
-  const gridEl = document.getElementById("catering-menu");
+  const listEl = document.getElementById("catering-menu");
   const searchInput = document.getElementById("catering-search");
   const searchBtn = document.getElementById("catering-search-btn");
 
-  if (!tabsEl || !gridEl) return;
+  if (!tabsEl || !listEl) return;
 
   let items = [];
   let activeTab = "all";
-  let lastManualTab = "Meat";
+  let lastManualTab = "all";
   let searchForcedAll = false;
 
   const metaEl = document.createElement("p");
@@ -112,28 +115,70 @@
       btn.addEventListener("click", () => {
         searchForcedAll = false;
         setActiveTab(tab);
-        renderGrid();
+        renderList();
       });
       tabsEl.appendChild(btn);
     });
   }
 
-  function renderGrid() {
-    const list = filteredList().sort(sortByName);
-    gridEl.innerHTML = "";
-    const q = getSearchQuery();
+  /**
+   * @param {{ name: string, tab?: string }} item
+   * @param {{ categoryTag?: string }} opts
+   */
+  function renderNameRow(item, opts) {
+    const row = document.createElement("article");
+    row.className = "menu-row";
 
-    if (!q) {
-      const scopeLabel = activeTab === "all" ? "all categories" : activeTab;
-      metaEl.textContent = `Showing ${list.length} ${
-        list.length === 1 ? "item" : "items"
-      } in ${scopeLabel}.`;
-    } else {
-      metaEl.textContent =
-        activeTab === "all"
-          ? `Showing ${list.length} results for "${q}" across all categories.`
-          : `Showing ${list.length} results for "${q}" in ${activeTab}.`;
+    const head = document.createElement("div");
+    head.className = "menu-row-head";
+
+    const name = document.createElement("h3");
+    name.className = "menu-row-name";
+    name.textContent = item.name;
+
+    head.appendChild(name);
+
+    if (opts && opts.categoryTag) {
+      const tag = document.createElement("span");
+      tag.className = "catering-row-category";
+      tag.textContent = opts.categoryTag;
+      head.appendChild(tag);
     }
+
+    row.appendChild(head);
+    return row;
+  }
+
+  function setMetaText(list, q) {
+    const total = items.length;
+    if (!q && activeTab === "all") {
+      metaEl.textContent = `${total} dishes below, grouped by category. Use a tab to show one category only.`;
+      return;
+    }
+    if (!q) {
+      const scope =
+        activeTab === "all" ? "all categories" : TAB_LABELS[activeTab];
+      metaEl.textContent = `Showing ${list.length} ${
+        list.length === 1 ? "dish" : "dishes"
+      } in ${scope}.`;
+      return;
+    }
+    if (activeTab === "all") {
+      metaEl.textContent = `${list.length} ${
+        list.length === 1 ? "match" : "matches"
+      } for “${q}” across all categories.`;
+    } else {
+      metaEl.textContent = `${list.length} ${
+        list.length === 1 ? "match" : "matches"
+      } for “${q}” in ${TAB_LABELS[activeTab]}.`;
+    }
+  }
+
+  function renderList() {
+    const q = getSearchQuery();
+    const list = filteredList().sort(sortByName);
+    listEl.innerHTML = "";
+    setMetaText(list, q);
 
     if (list.length === 0) {
       const empty = document.createElement("p");
@@ -141,19 +186,61 @@
       empty.textContent = q
         ? "No items match your search. Try another word."
         : "No items in this category.";
-      gridEl.appendChild(empty);
+      listEl.appendChild(empty);
       return;
     }
 
+    const showCategoryOnRow = Boolean(q) && activeTab === "all";
+
+    if (!q && activeTab === "all") {
+      listEl.classList.remove("catering-list-flat");
+      CATEGORY_ORDER.forEach((cat) => {
+        const inCat = items
+          .filter((i) => i.tab === cat)
+          .sort(sortByName);
+        if (inCat.length === 0) return;
+
+        const sec = document.createElement("section");
+        sec.className = "menu-section";
+
+        const headRow = document.createElement("div");
+        headRow.className = "menu-section-head";
+
+        const h2 = document.createElement("h2");
+        h2.className = "menu-section-title";
+        const slug = cat.replace(/\s+/g, "-").replace(/&/g, "and").toLowerCase();
+        h2.id = `catering-cat-${slug}`;
+        h2.textContent = TAB_LABELS[cat];
+
+        headRow.appendChild(h2);
+
+        const listWrap = document.createElement("div");
+        listWrap.className = "menu-section-list";
+
+        inCat.forEach((item) => {
+          listWrap.appendChild(renderNameRow(item));
+        });
+
+        sec.setAttribute("aria-labelledby", h2.id);
+        sec.appendChild(headRow);
+        sec.appendChild(listWrap);
+        listEl.appendChild(sec);
+      });
+      return;
+    }
+
+    listEl.classList.add("catering-list-flat");
+    const flat = document.createElement("div");
+    flat.className = "menu-section-list";
+
     list.forEach((item) => {
-      const card = document.createElement("article");
-      card.className = "catering-card";
-      const title = document.createElement("p");
-      title.className = "catering-card-title";
-      title.textContent = item.name;
-      card.appendChild(title);
-      gridEl.appendChild(card);
+      const tag = showCategoryOnRow ? TAB_LABELS[item.tab] || item.tab : "";
+      flat.appendChild(
+        renderNameRow(item, showCategoryOnRow ? { categoryTag: tag } : {})
+      );
     });
+
+    listEl.appendChild(flat);
   }
 
   function onSearchChange() {
@@ -165,7 +252,7 @@
       searchForcedAll = false;
       setActiveTab(lastManualTab);
     }
-    renderGrid();
+    renderList();
   }
 
   if (searchInput) {
@@ -187,11 +274,11 @@
     .then((data) => {
       items = normalizeItems(data);
       renderTabs();
-      renderGrid();
+      renderList();
     })
     .catch((err) => {
       console.error(err);
-      gridEl.innerHTML =
+      listEl.innerHTML =
         '<p class="catering-menu-error">Unable to load the catering menu. Please try again later.</p>';
     });
 })();

@@ -33,65 +33,73 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/menuPage.css" />
     <link rel="stylesheet" href="/css/cateringPage.css" />
   </head>
-  <body class="page-with-fixed-nav">
+  <body class="page-with-fixed-nav catering-page">
     <div id="site-header" data-active-page="catering"></div>
 
-    <main class="catering-main">
-      <section
-        class="catering-page-header"
-        aria-labelledby="catering-page-title"
-      >
-        <div class="container">
-          <h1 id="catering-page-title">Catering Services</h1>
-          <p class="catering-lead">
+    <main class="menu-page-main">
+      <div class="menu-page-inner">
+        <section
+          class="menu-page-header"
+          aria-labelledby="catering-page-title"
+        >
+          <div class="menu-page-title-wrap">
+            <h1 id="catering-page-title" class="menu-page-title">
+              Catering Services
+            </h1>
+          </div>
+          <p class="menu-page-subtitle">
             Explore our catering menu for your special events. Contact us for
             custom orders and pricing.
           </p>
-        </div>
-      </section>
+        </section>
 
-      <section class="catering-panel" aria-label="Catering menu">
-        <div class="container catering-panel-inner">
-          <div class="catering-toolbar">
-            <label class="catering-search" for="catering-search">
-              <span class="catering-search-label">Find a dish</span>
-              <span class="catering-search-row">
-                <input
-                  type="search"
-                  id="catering-search"
-                  class="catering-search-input"
-                  placeholder="Search by name…"
-                  autocomplete="off"
-                  enterkeyhint="search"
-                />
-                <button
-                  type="button"
-                  class="catering-search-btn"
-                  id="catering-search-btn"
-                  aria-label="Search menu"
-                >
-                  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                </button>
-              </span>
-            </label>
+        <section class="catering-panel" aria-label="Catering menu">
+          <div class="catering-panel-inner">
+            <div class="catering-toolbar">
+              <label class="catering-search" for="catering-search">
+                <span class="catering-search-label">Find a dish</span>
+                <span class="catering-search-row">
+                  <input
+                    type="search"
+                    id="catering-search"
+                    class="catering-search-input"
+                    placeholder="Search by name…"
+                    autocomplete="off"
+                    enterkeyhint="search"
+                  />
+                  <button
+                    type="button"
+                    class="catering-search-btn"
+                    id="catering-search-btn"
+                    aria-label="Search menu"
+                  >
+                    <i
+                      class="fa-solid fa-magnifying-glass"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </span>
+              </label>
+            </div>
+
+            <div
+              class="catering-tabs"
+              id="catering-tabs"
+              role="tablist"
+              aria-label="Menu category"
+            ></div>
+
+            <div
+              class="catering-list"
+              id="catering-menu"
+              aria-live="polite"
+            ></div>
           </div>
-
-          <div
-            class="catering-tabs"
-            id="catering-tabs"
-            role="tablist"
-            aria-label="Menu category"
-          ></div>
-
-          <div
-            class="catering-grid"
-            id="catering-menu"
-            aria-live="polite"
-          ></div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer>

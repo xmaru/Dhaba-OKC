@@ -1,52 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Catering page — toolbar, tabs, and list align with dine-in menu (menuPage.css) */
 
-.catering-main {
-  padding-bottom: 4rem;
-}
-
-/* Single page header */
-.catering-page-header {
-  padding: 2.25rem 0 2.75rem;
-  text-align: center;
-}
-
-.catering-page-header h1 {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--accent-warm);
-  display: inline-block;
-}
-
-.catering-lead {
-  font-family: var(--font-body);
-  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
-  line-height: 1.65;
-  color: var(--text-muted);
-  max-width: 38rem;
-  margin: 0 auto;
-}
-
-/* Menu panel: extra breathing room */
 .catering-panel {
   padding: 0 0 1rem;
 }
 
 .catering-panel-inner {
-  max-width: 1100px;
+  max-width: 100%;
 }
 
 .catering-toolbar {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   display: flex;
   justify-content: center;
 }
@@ -78,11 +41,11 @@
   overflow: hidden;
   border: 1px solid var(--border-card);
   background: var(--card-bg);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 body.dark-mode .catering-search-row {
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .catering-search-input {
@@ -106,16 +69,16 @@ body.dark-mode .catering-search-row {
 }
 
 .catering-search-row:focus-within {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(55, 178, 77, 0.25);
+  border-color: rgba(184, 137, 92, 0.55);
+  box-shadow: 0 0 0 2px rgba(212, 165, 116, 0.28);
 }
 
 .catering-search-btn {
   flex-shrink: 0;
   width: 3.5rem;
   border: none;
-  background: var(--accent-color);
-  color: #fff;
+  background: var(--accent-warm);
+  color: #1f1810;
   cursor: pointer;
   font-size: 1.1rem;
   display: flex;
@@ -125,31 +88,29 @@ body.dark-mode .catering-search-row {
 }
 
 .catering-search-btn:hover {
-  filter: brightness(1.08);
+  filter: brightness(1.06);
 }
 
 .catering-search-btn:focus-visible {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--accent-warm);
   outline-offset: 2px;
 }
 
-/* Tabs */
+/* Category tabs — pill row, matches menu accent language */
 .catering-tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.65rem 0.5rem;
-  margin-bottom: 0.8rem;
-  overflow-x: visible;
-  padding-bottom: 0.35rem;
-  scrollbar-width: thin;
+  gap: 0.5rem 0.45rem;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.25rem;
 }
 
 .catering-tab {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.55rem 1.1rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--border-card);
   background: var(--card-bg);
@@ -158,117 +119,119 @@ body.dark-mode .catering-search-row {
   transition:
     background 0.2s ease,
     color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.15s ease;
+    border-color 0.2s ease;
 }
 
 .catering-tab:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+  border-color: rgba(212, 165, 116, 0.45);
+  color: var(--accent-warm);
 }
 
 .catering-tab.is-active {
-  background: var(--accent-color);
+  background: var(--accent-warm);
   color: #fff;
-  border-color: var(--accent-color);
+  border-color: var(--accent-warm);
+}
+
+body.dark-mode .catering-tab.is-active {
+  color: #1a1410;
 }
 
 .catering-tab.is-active:hover {
+  filter: brightness(1.06);
   color: #fff;
-  filter: brightness(1.05);
+}
+
+body.dark-mode .catering-tab.is-active:hover {
+  color: #1a1410;
 }
 
 .catering-results-meta {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin: 0 0 1.9rem;
-  text-align: center;
-}
-
-/* Grid — larger cards, more gap */
-.catering-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem 1.75rem;
-}
-
-.catering-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-card);
-  border-radius: 14px;
-  padding: 1.5rem 1.65rem;
-  min-height: 5.25rem;
-  display: flex;
-  align-items: center;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-body.dark-mode .catering-card {
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
-}
-
-.catering-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(55, 178, 77, 0.45);
-  box-shadow:
-    0 8px 20px rgba(55, 178, 77, 0.12),
-    0 0 0 1px rgba(55, 178, 77, 0.18);
-}
-
-body.dark-mode .catering-card:hover {
-  box-shadow:
-    0 10px 24px rgba(55, 178, 77, 0.1),
-    0 0 18px rgba(55, 178, 77, 0.08);
-}
-
-.catering-card-title {
-  font-family: var(--font-body);
-  font-size: 1.08rem;
-  font-weight: 600;
+  font-size: 0.875rem;
   line-height: 1.5;
-  color: var(--text-color);
-  margin: 0;
+  color: var(--text-muted);
+  margin: 0 0 1.35rem;
+  text-align: center;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Same vertical rhythm as .menu-section-list */
+.catering-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.catering-list-flat {
+  gap: 0.65rem;
+}
+
+.catering-list .menu-section {
+  margin-bottom: 0;
+}
+
+.catering-list .menu-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Extra space so the section rule sits clearly below heading text (Playfair + border). */
+body.catering-page .catering-list .menu-section-head {
+  padding-bottom: 0.95rem;
+}
+
+body.catering-page .catering-list .menu-section-title {
+  line-height: 1.22;
+  padding-bottom: 0.2rem;
+}
+
+/* Optional category tag when searching across all tabs */
+.catering-row-category {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(212, 165, 116, 0.12);
+  border: 1px solid rgba(212, 165, 116, 0.22);
+}
+
+body.dark-mode .catering-row-category {
+  background: rgba(212, 165, 116, 0.1);
+  border-color: rgba(212, 165, 116, 0.28);
 }
 
 .catering-empty,
 .catering-menu-error {
-  grid-column: 1 / -1;
   text-align: center;
-  padding: 3rem 1.5rem;
-  font-family: "Inter", sans-serif;
-  font-size: 1.05rem;
+  padding: 2.5rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1.55;
-  color: var(--text-color);
-  opacity: 0.85;
+  color: var(--text-muted);
 }
 
 @media (max-width: 640px) {
-  .catering-page-header {
-    padding: 1.75rem 0 2rem;
-  }
-
-  .catering-tabs {
-    margin-bottom: 0.75rem;
-    gap: 0.5rem;
+  .catering-toolbar {
+    margin-bottom: 1.5rem;
   }
 
   .catering-tab {
     font-size: 0.8rem;
-    padding: 0.5rem 0.9rem;
+    padding: 0.45rem 0.85rem;
   }
 
-  .catering-grid {
-    grid-template-columns: 1fr;
-    gap: 1.15rem;
+  .catering-results-meta {
+    margin-bottom: 1.15rem;
+    font-size: 0.82rem;
   }
 
-  .catering-card {
-    padding: 1.35rem 1.4rem;
-    min-height: unset;
+  .catering-list {
+    gap: 1.65rem;
   }
 }

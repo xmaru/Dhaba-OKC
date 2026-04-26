@@ -1,11 +1,13 @@
 /* Dine-in menu page — row list (content from /data/dineInMenuSample.json) */
 
-body.menu-page {
+body.menu-page,
+body.catering-page {
   background: var(--bg-color);
   color: var(--text-color);
 }
 
-body.page-with-fixed-nav.menu-page .menu-page-main {
+body.page-with-fixed-nav.menu-page .menu-page-main,
+body.page-with-fixed-nav.catering-page .menu-page-main {
   position: relative;
   z-index: 0;
   padding-top: clamp(5.75rem, 10vh, 7.25rem);
@@ -13,7 +15,8 @@ body.page-with-fixed-nav.menu-page .menu-page-main {
   background: transparent;
 }
 
-body.menu-page header {
+body.menu-page header,
+body.catering-page header {
   z-index: 1100;
 }
 
@@ -31,6 +34,15 @@ body.menu-page header {
   text-align: center;
   padding: 2.5rem 0 2.25rem;
   margin-bottom: 2.25rem;
+}
+
+/* In main(), page heroes must stay in flow: global `header { position: fixed }` targets the nav only in practice, but a mistaken <header class="menu-page-header"> would overlap content. */
+main .menu-page-header {
+  position: relative;
+  z-index: 0;
+  top: auto;
+  left: auto;
+  width: 100%;
 }
 
 .menu-page-title-wrap {
@@ -134,7 +146,7 @@ body.dark-mode .menu-row {
 }
 
 .menu-row:hover {
-  border-color: rgba(55, 178, 77, 0.35);
+  border-color: rgba(212, 165, 116, 0.45);
 }
 
 .menu-row-head {
@@ -218,12 +230,14 @@ body.dark-mode .menu-row {
   font-family: var(--font-body, "Inter", sans-serif);
 }
 
-body.menu-page footer {
+body.menu-page footer,
+body.catering-page footer {
   background: var(--footer-bg);
   border-top: 1px solid var(--border-card);
 }
 
-body.menu-page footer p {
+body.menu-page footer p,
+body.catering-page footer p {
   color: var(--footer-text-color);
 }
 

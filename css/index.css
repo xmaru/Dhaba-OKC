@@ -6,16 +6,17 @@
   --footer-bg: linear-gradient(to bottom, #201a18, #0f0b09);
   --footer-text-color: #ffffff;
   --card-bg: #ffffff;
-  --accent-color: #37b24d;
-  --accent-dark: #2b8a3e;
+  /* Primary accent: warm gold (site-wide; replaces former green) */
+  --accent-warm: #b8895c;
+  --accent-color: #b8895c;
+  --accent-dark: #6e5236;
   --border-card: #e7e1da;
   --special-color: #ffc107;
-  --price-color: #045017;
+  --price-color: #4a3424;
 
   /* Shared typography (aligned with menu page) */
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
-  --accent-warm: #b8895c;
   --text-muted: rgba(34, 34, 34, 0.78);
 
   /* old color: #f7931a */
@@ -34,8 +35,10 @@ body.dark-mode {
   --footer-text-color: #222;
   --card-bg: #1f1814;
   --border-card: #4a3b34;
-  --price-color: #caffd3;
   --accent-warm: #d4a574;
+  --accent-color: #d4a574;
+  --accent-dark: #b8895c;
+  --price-color: #e8d4c0;
   --text-muted: rgba(245, 245, 245, 0.72);
   /* --text-2nd-color: #b6a896; */
 }
@@ -306,7 +309,8 @@ body.page-with-fixed-nav main {
 
 .btn-hero {
   background: var(--accent-color);
-  color: #fff;
+  color: #1f1810;
+  text-decoration: none;
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
@@ -319,6 +323,10 @@ body.page-with-fixed-nav main {
   justify-content: center;
   vertical-align: top;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero:visited {
+  color: #1f1810;
 }
 
 .btn-hero:hover {
@@ -539,7 +547,7 @@ body.page-with-fixed-nav main {
 
 .special-card {
   border: 1px solid var(--accent-color);
-  box-shadow: 0 0 15px rgba(55, 178, 77, 0.6);
+  box-shadow: 0 0 18px rgba(212, 165, 116, 0.45);
 }
 
 .buffet-card-title {
@@ -563,13 +571,13 @@ body.page-with-fixed-nav main {
   align-items: center;
   margin-top: 15px;
   font-size: 1.2rem;
-  background: #37b24d1a;
+  background: rgba(184, 137, 92, 0.14);
   padding: 10px 20px;
   border-radius: 8px;
   width: fit-content;
   margin: auto;
   margin-top: 50px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid rgba(184, 137, 92, 0.45);
 }
 
 .price {
@@ -582,6 +590,11 @@ body.page-with-fixed-nav main {
   font-size: 0.9rem;
   margin-top: 4px;
   color: var(--price-color);
+}
+
+body.dark-mode .price-container {
+  background: rgba(212, 165, 116, 0.11);
+  border-color: rgba(212, 165, 116, 0.35);
 }
 
 /***************************** */
@@ -650,7 +663,7 @@ body.page-with-fixed-nav main {
 
 .about-card i {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
-  color: #fff;
+  color: #1f1810;
   width: 50px;
   height: 50px;
   display: flex;
@@ -683,7 +696,7 @@ body.page-with-fixed-nav main {
 
 .about-card:hover {
   cursor: pointer;
-  box-shadow: 0 6px 25px #00ff2f55;
+  box-shadow: 0 8px 28px rgba(212, 165, 116, 0.22);
 }
 
 /***************************** */
